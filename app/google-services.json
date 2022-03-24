@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "516088357089",
+    "project_id": "appraisal-app-8166d",
+    "storage_bucket": "appraisal-app-8166d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:516088357089:android:706792ff43222e5ccd57a0",
+        "android_client_info": {
+          "package_name": "com.example.mmustappraisal"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "516088357089-dpoturc2m8ad05u4omi7qe71ntbhafq8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBhi3w7y7TA_m63B4gNNhSfjbdW83OOfZg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "516088357089-dpoturc2m8ad05u4omi7qe71ntbhafq8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
