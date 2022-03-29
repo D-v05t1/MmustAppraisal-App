@@ -1,28 +1,350 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView  xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Edtobjective">
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/fab"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="left"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="16dp" />
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello  welcome test"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true"
-        android:textSize="18sp"
-        android:fontFamily="sans-serif-condensed"
-        />
+    <RelativeLayout
+        android:layout_width="match_parent"
 
-</RelativeLayout>
+        android:layout_height="match_parent">
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/topbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#0094CC"
+            app:menu="@menu/dv05t1" />
+
+<RelativeLayout
+    android:id="@+id/sll2"
+    android:layout_below="@id/topbar"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="15dp"
+    android:orientation="horizontal"
+    >
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/indicator1a"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:gravity="center"
+        android:hint="Ojective one "
+        android:textColor="@color/black"
+        android:textSize="23sp" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/viewmore1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/indicator1a"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:gravity="center"
+        android:hint="Indicators agreed"
+        android:textColor="@color/black"
+        android:textSize="23sp" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/proof1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/viewmore1"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:textSize="23sp"
+        android:gravity="center"
+        android:hint="proof of result" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/Agreedperformance"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/proof1"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:textSize="23sp"
+        android:gravity="center"
+        android:hint="Agreed perfomance targets" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/selfmark1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/Agreedperformance"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:gravity="center"
+        android:hint="self appraisal mark"
+        android:inputType="number"
+        android:textSize="23sp" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/sl2"
+            android:layout_below="@id/sll2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:orientation="horizontal"
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/indicator2a"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:gravity="center"
+                android:hint="Ojective two "
+                android:textColor="@color/black"
+                android:textSize="23sp" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/viewmore2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/indicator2a"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:gravity="center"
+                android:hint="Indicators agreed"
+                android:textColor="@color/black"
+                android:textSize="23sp" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/proof2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/viewmore2"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:gravity="center"
+
+                android:hint="proof of result"
+                android:textSize="23sp" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/Agreedperformance2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/proof2"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:gravity="center"
+                android:hint="Agreed perfomance targets"
+                android:textSize="23sp" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/Agreedperformance2"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:id="@+id/selfmark2"
+                android:gravity="center"
+                android:hint="self appraisal mark"
+                android:inputType="number"
+                android:textSize="23sp" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/sll3"
+            android:layout_below="@id/sl2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:orientation="horizontal"
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/indicator3a"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:gravity="center"
+                android:inputType="text"
+                android:hint="Ojective three "
+                android:textColor="@color/black"
+                android:textSize="23sp" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/viewmore3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/indicator3a"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:gravity="center"
+                android:inputType="text"
+                android:hint="Indicators agreed"
+                android:textColor="@color/black"
+                android:textSize="23sp" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/proof3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/viewmore3"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:inputType="text"
+                android:textSize="23sp"
+                android:gravity="center"
+                android:hint="proof of result" />
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/Agreedperformance3"
+                android:layout_below="@id/proof3"
+                android:inputType="number"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:textSize="23sp"
+                android:gravity="center"
+                android:hint="Agreed perfomance targets" />
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/Agreedperformance3"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:gravity="center"
+                android:textSize="23sp"
+                android:inputType="number"
+                android:hint="self appraisal mark" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/sll4"
+            android:layout_below="@id/sll3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:orientation="horizontal"
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/indicator4a"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:gravity="center"
+                android:inputType="text"
+                android:hint="Ojective three "
+                android:textColor="@color/black"
+                android:textSize="23sp" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/viewmore4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/indicator4a"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:gravity="center"
+                android:inputType="text"
+                android:hint="Indicators agreed"
+                android:textColor="@color/black"
+                android:textSize="23sp" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/proof4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/viewmore4"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:inputType="text"
+                android:gravity="center"
+                android:hint="proof of result" />
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/Agreedperformance4"
+                android:layout_below="@id/proof4"
+                android:inputType="number"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:gravity="center"
+                android:hint="Agreed perfomance targets" />
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/Agreedperformance4"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:gravity="center"
+                android:inputType="number"
+                android:hint="self appraisal mark" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/sll5"
+            android:layout_below="@id/sl2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:orientation="horizontal"
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/indicator5a"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:gravity="center"
+                android:inputType="text"
+                android:hint="Ojective three "
+                android:textColor="@color/black"
+                android:textSize="23sp" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/viewmore5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/indicator5a"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:gravity="center"
+                android:inputType="text"
+                android:hint="Indicators agreed"
+                android:textColor="@color/black"
+                android:textSize="23sp" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/proof5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/viewmore5"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:inputType="text"
+                android:gravity="center"
+                android:hint="proof of result" />
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/Agreedperformance5"
+                android:layout_below="@id/proof5"
+                android:inputType="number"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:gravity="center"
+                android:hint="Agreed perfomance targets" />
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/Agreedperformance5"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:gravity="center"
+                android:inputType="number"
+                android:hint="self appraisal mark" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</ScrollView>

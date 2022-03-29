@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
-    android:background="#110822"
+    android:background="#00BCD4"
     tools:context=".Register">
     <RelativeLayout
         android:layout_width="match_parent"
@@ -17,21 +17,51 @@
             android:orientation="horizontal">
 
             <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:hint="Enter Your Name"
+                android:textColorHint="@color/black"
+                android:paddingTop="35dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/uname"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#ffffff"
+                    android:textColor="@color/black"
+                    android:importantForAutofill="no"
+                    android:inputType="textEmailAddress"
+                    android:textSize="18sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/Rl1a"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/Rl1"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/loginemail"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
                 android:layout_marginEnd="20dp"
                 android:hint="Enter Your Email"
-                android:textColorHint="@color/white"
+                android:textColorHint="@color/black"
                 android:paddingTop="35dp">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/regemail"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="#110822"
-                    android:textColor="@color/white"
+                    android:background="#ffffff"
+                    android:textColor="@color/black"
                     android:importantForAutofill="no"
                     android:inputType="textEmailAddress"
                     android:textSize="18sp" />
@@ -43,7 +73,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:layout_below="@id/Rl1"
+            android:layout_below="@id/Rl1a"
             android:orientation="horizontal">
 
             <com.google.android.material.textfield.TextInputLayout
@@ -53,14 +83,14 @@
                 android:layout_marginStart="20dp"
                 android:layout_marginEnd="20dp"
                 android:hint="Enter Password"
-                android:textColorHint="@color/white"
+                android:textColorHint="#000000"
                 android:paddingTop="35dp">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/rpassword"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="#110822"
+                    android:background="#ffffff"
                     android:textColor="@color/white"
                     android:importantForAutofill="no"
                     android:inputType="textPassword"
@@ -68,12 +98,13 @@
             </com.google.android.material.textfield.TextInputLayout>
 
         </LinearLayout>
+
         <LinearLayout
             android:id="@+id/Rl3"
-            android:layout_below="@+id/Rl2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
+            android:layout_below="@+id/Rl2"
+            android:layout_marginTop="10dp"
             android:orientation="horizontal">
 
             <com.google.android.material.textfield.TextInputLayout
@@ -83,17 +114,17 @@
                 android:layout_marginStart="20dp"
                 android:layout_marginEnd="20dp"
                 android:hint="Confirm Password"
-                android:textColorHint="@color/white"
-                android:paddingTop="35dp">
+                android:paddingTop="35dp"
+                android:textColorHint="@color/black">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/cnpassword"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="#110822"
-                    android:textColor="@color/white"
+                    android:background="@color/white"
                     android:importantForAutofill="no"
                     android:inputType="textPassword"
+                    android:textColor="@color/white"
                     android:textSize="18sp" />
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -103,7 +134,7 @@
             android:layout_below="@id/Rl3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="10dp"
             android:orientation="horizontal">
 
             <com.google.android.material.textfield.TextInputLayout
@@ -114,13 +145,13 @@
                 android:layout_marginEnd="20dp"
                 android:hint="Enter Personal Number"
                 android:paddingTop="35dp"
-                android:textColorHint="@color/white">
+                android:textColorHint="@color/black">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/regpersonalno"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="#110822"
+                    android:background="@color/white"
                     android:importantForAutofill="no"
                     android:inputType="number"
                     android:textColor="@color/white"
@@ -134,7 +165,7 @@
             android:layout_below="@id/Rl4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="10dp"
             android:orientation="horizontal">
         <ProgressBar
             android:id="@+id/pbar"
@@ -150,7 +181,7 @@
             android:layout_below="@id/Rl40"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="10dp"
             android:orientation="horizontal">
                 <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/faculty"
@@ -160,13 +191,13 @@
                     android:layout_marginEnd="20dp"
                     android:hint="Enter Your Faculty"
                     android:paddingTop="35dp"
-                    android:textColorHint="@color/white">
+                    android:textColorHint="@color/black">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/regfaculty"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:background="#110822"
+                        android:background="@color/white"
                         android:importantForAutofill="no"
                         android:inputType="text"
                         android:textColor="@color/white"
@@ -181,7 +212,7 @@
             android:layout_below="@id/Rl30"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="10dp"
             android:orientation="horizontal">
 
             <com.google.android.material.textfield.TextInputLayout
@@ -192,13 +223,13 @@
                 android:layout_marginEnd="20dp"
                 android:hint="Enter unit"
                 android:paddingTop="35dp"
-                android:textColorHint="@color/white">
+                android:textColorHint="@color/black">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/regunit"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="#110822"
+                    android:background="@color/white"
                     android:importantForAutofill="no"
                     android:inputType="text"
                     android:textColor="@color/white"
@@ -211,7 +242,7 @@
             android:layout_below="@id/Rl6"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="10dp"
             android:orientation="horizontal">
 
             <com.google.android.material.textfield.TextInputLayout
@@ -222,13 +253,13 @@
                 android:layout_marginEnd="20dp"
                 android:hint="Enter Designation"
                 android:paddingTop="35dp"
-                android:textColorHint="@color/white">
+                android:textColorHint="@color/black">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/regdesignation"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="#110822"
+                    android:background="@color/white"
                     android:importantForAutofill="no"
                     android:inputType="text"
                     android:textColor="@color/white"
@@ -241,7 +272,7 @@
             android:layout_below="@id/Rl7"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="10dp"
             android:orientation="horizontal">
 
             <com.google.android.material.textfield.TextInputLayout
@@ -252,13 +283,13 @@
                 android:layout_marginEnd="20dp"
                 android:hint="Enter Job Group"
                 android:paddingTop="35dp"
-                android:textColorHint="@color/white">
+                android:textColorHint="@color/black">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/regjobgroup"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="#110822"
+                    android:background="@color/white"
                     android:importantForAutofill="no"
                     android:inputType="text"
                     android:textColor="@color/white"
@@ -271,7 +302,7 @@
             android:layout_below="@id/Rl8"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="10dp"
             android:orientation="horizontal">
 
             <com.google.android.material.textfield.TextInputLayout
@@ -280,15 +311,15 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
                 android:layout_marginEnd="20dp"
-                android:hint="Enter spepial duty if any"
+                android:hint="Enter special duty if any"
                 android:paddingTop="35dp"
-                android:textColorHint="@color/white">
+                android:textColorHint="@color/black">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/regspduty"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="#110822"
+                    android:background="@color/white"
                     android:importantForAutofill="no"
                     android:inputType="text"
                     android:textColor="@color/white"
@@ -301,7 +332,7 @@
             android:layout_below="@id/Rl9"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="10dp"
             android:orientation="horizontal">
 
             <com.google.android.material.textfield.TextInputLayout
@@ -312,13 +343,13 @@
                 android:layout_marginEnd="20dp"
                 android:hint="Enter Job Group"
                 android:paddingTop="35dp"
-                android:textColorHint="@color/white">
+                android:textColorHint="@color/black">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/regsupervisorname"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="#110822"
+                    android:background="@color/white"
                     android:importantForAutofill="no"
                     android:inputType="text"
                     android:textColor="@color/white"
@@ -331,13 +362,14 @@
             android:id="@+id/selgender"
             android:layout_height="wrap_content"
             android:layout_below="@id/Rl10"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="10dp"
             android:orientation="horizontal">
             <RadioGroup
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="15dp"
-                android:background="#110822"
+                android:gravity="center"
+                android:background="@color/white"
                 android:id="@+id/gen"
                 android:orientation="horizontal">
                 <RadioButton
@@ -345,16 +377,18 @@
                     android:layout_height="wrap_content"
                     android:textStyle="bold"
                     android:textSize="18sp"
+                    android:gravity="center"
                     android:layout_weight="1"
-                    android:textColor="@color/white"
+                    android:textColor="@color/black"
                     android:text="male"
                     android:id="@+id/male"/>
                 <RadioButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textStyle="bold"
+                    android:gravity="center"
                     android:textSize="18sp"
-                    android:textColor="@color/white"
+                    android:textColor="@color/black"
                     android:text="female"
                     android:id="@+id/female"/>
             </RadioGroup>
@@ -365,7 +399,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="10dp"
             android:layout_below="@id/selgender">
             <Button
                 android:layout_width="wrap_content"
@@ -381,7 +415,7 @@
                 android:layout_height="wrap_content"
                 android:background="@drawable/buttonbackground"
                 android:text="login"
-                android:layout_weight="2"
+                android:layout_weight="1"
                 android:layout_margin="8dp"
                 android:id="@+id/login"
                 />

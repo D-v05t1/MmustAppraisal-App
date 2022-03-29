@@ -4,14 +4,20 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#110822"
+    android:background="#00BCD4"
     tools:context=".login">
-
-    <LinearLayout
-        android:id="@+id/l1"
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/topbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="80dp"
+        android:background="#0094CC"
+        app:menu="@menu/dv05t1" />
+    <LinearLayout
+        android:id="@+id/l1"
+        android:layout_below="@id/topbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
         android:orientation="horizontal">
 
         <com.google.android.material.textfield.TextInputLayout
@@ -21,14 +27,14 @@
             android:layout_marginStart="20dp"
             android:layout_marginEnd="20dp"
             android:hint="Enter Your Email"
-            android:textColorHint="@color/white"
+            android:textColorHint="@color/black"
             android:paddingTop="35dp">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/lemail"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="#110822"
+                android:background="@color/white"
                 android:textColor="@color/white"
                 android:importantForAutofill="no"
                 android:inputType="textEmailAddress"
@@ -62,13 +68,13 @@
             android:layout_marginEnd="20dp"
             android:hint="Enter Your Password"
             android:paddingTop="35dp"
-            android:textColorHint="@color/white">
+            android:textColorHint="@color/black">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/lpassword"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="#110822"
+                android:background="@color/white"
                 android:importantForAutofill="no"
                 android:inputType="textEmailAddress"
                 android:textColor="#ffffff"
@@ -78,21 +84,22 @@
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/l3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
+        android:layout_below="@+id/l2"
         android:layout_marginTop="60dp"
-        android:id="@+id/l3"
         android:gravity="center"
-        android:layout_below="@+id/l2">
-        <Button
-            android:layout_width="wrap_content"
-            android:id="@+id/slogin"
-            android:layout_height="wrap_content"
-            android:text="login"
+        android:orientation="horizontal">
 
+        <Button
+            android:id="@+id/slogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:background="@drawable/buttonbackground"
-            android:gravity="center"/>
+
+            android:gravity="center"
+            android:text="login" />
     </LinearLayout>
 
     <LinearLayout
@@ -112,8 +119,8 @@
             android:layout_marginEnd="20dp"
             android:gravity="center"
             android:text="No Account? register here"
-            android:textSize="15sp"
-            android:textColor="#ffffff"/>
+            android:textSize="18sp"
+            android:textColor="@color/white"/>
 
 
 

@@ -27,7 +27,7 @@ import java.util.Objects;
 
 public class Register extends AppCompatActivity {
 private TextInputEditText email,password,confirmnpasssword,personalno, faculty, unit,
-        designation,jobgroup,speciladuty,supervisorname;
+        designation,jobgroup,speciladuty,supervisorname,username;
 private RadioGroup gender;
 private Button register,loginme;
 private FirebaseAuth fAuth;
@@ -39,6 +39,7 @@ private ProgressBar pb;
         setContentView(R.layout.activity_register);
         pb=findViewById(R.id.pbar);
         email=findViewById(R.id.regemail);
+        username=findViewById(R.id.uname);
         password=findViewById(R.id.rpassword);
         confirmnpasssword=findViewById(R.id.cnpassword);
         personalno=findViewById(R.id.regpersonalno);
@@ -63,6 +64,7 @@ private ProgressBar pb;
             @Override
             public void onClick(View v) {
                 String usrmail = email.getText().toString();
+                String usrname = username.getText().toString();
                 String pass = password.getText().toString();
                 String confirm = confirmnpasssword.getText().toString();
                 String no = personalno.getText().toString();
@@ -80,19 +82,19 @@ private ProgressBar pb;
                     Toast.makeText(Register.this, "wrong mail format", Toast.LENGTH_SHORT).show();
 
                 } else if (TextUtils.isEmpty(usrmail) || TextUtils.isEmpty(pass) || TextUtils.isEmpty(confirm)
-                        || TextUtils.isEmpty(no) || TextUtils.isEmpty(fac) || TextUtils.isEmpty(eunit) || TextUtils.isEmpty(des) ||
+                        || TextUtils.isEmpty(no)||TextUtils.isEmpty(usrname) || TextUtils.isEmpty(fac) || TextUtils.isEmpty(eunit) || TextUtils.isEmpty(des) ||
                         TextUtils.isEmpty(jobgrp) || TextUtils.isEmpty(special) || TextUtils.isEmpty(supervisor)) {
                     Toast.makeText(Register.this, "Hello, check all fields please", Toast.LENGTH_SHORT).show();
                 } else {
                     final String gender = sgender.getText().toString();
-                    create(usrmail, pass, no, fac, eunit, des, jobgrp, special, supervisor);
+                    create(usrmail, pass, no, fac,usrname, eunit, des, jobgrp, special, supervisor);
                 }
 
             }
         });
     }
 
-    private void create(String usrmail, String pass, String no, String fac, String eunit, String des, String jobgrp, String special, String supervisor) {
+    private void create(String usrmail, String pass,String usrname, String no, String fac, String eunit, String des, String jobgrp, String special, String supervisor) {
         pb.setVisibility(View.VISIBLE);
         fAuth.createUserWithEmailAndPassword(usrmail,pass).addOnCompleteListener(new OnCompleteListener<AuthResult>(){
     @Override
@@ -108,6 +110,7 @@ private ProgressBar pb;
 
                 hashmap.put("userid", userId);
                 hashmap.put("usrmail", usrmail);
+                hashmap.put("usrname", usrname);
                 hashmap.put("no", no);
                 hashmap.put("fac", fac);
                 hashmap.put("eunit", eunit);
@@ -120,7 +123,7 @@ private ProgressBar pb;
                     public void onComplete(@NonNull Task<Void> task) {
                         pb.setVisibility(View.GONE);
                         if (task.isSuccessful()) {
-                            Intent r = new Intent(Register.this, MainActivity.class);
+                            Intent r = new Intent(Register.this, login.class);
                             r.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
                             startActivity(r);
                             finish();

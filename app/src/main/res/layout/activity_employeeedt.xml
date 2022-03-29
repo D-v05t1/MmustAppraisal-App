@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".employeeedt">
+    <RelativeLayout
+        android:id="@+id/el1"
+        android:layout_below="@id/sl2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:orientation="horizontal"
+        >
+
+        <TextView
+            android:id="@+id/indicator3a"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Ojective three "
+            android:textColor="@color/black"
+            android:textSize="23sp" />
+
+        <TextView
+            android:id="@+id/viewmore"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/indicator3a"
+            android:gravity="center"
+            android:text="Indicators agreed"
+            android:textColor="@color/black"
+            android:textSize="23sp" />
+
+        <TextView
+            android:id="@+id/proof"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/viewmore"
+            android:inputType="text"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:textSize="23sp"
+            android:text="proof of result" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/Agreedperformance"
+            android:layout_below="@id/proof"
+            android:textColor="@color/black"
+            android:textSize="23sp"
+            android:gravity="center"
+            android:text="Agreed perfomance targets" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/Agreedperformance"
+            android:textColor="@color/black"
+            android:textSize="23sp"
+            android:gravity="center"
+            android:text="self appraisal mark" />
+    </RelativeLayout>
+</ScrollView>

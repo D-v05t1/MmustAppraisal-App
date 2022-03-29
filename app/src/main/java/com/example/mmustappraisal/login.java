@@ -11,6 +11,7 @@ import android.widget.Button;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.widget.Toolbar;
 
 import com.firebase.ui.auth.viewmodel.AuthViewModelBase;
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -33,12 +34,17 @@ private ProgressBar pb;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+        Toolbar myToolbar = (Toolbar) findViewById(R.id.topbar);
+        setSupportActionBar(myToolbar);
+
         Email = findViewById(R.id.lemail);
         Password = findViewById(R.id.lpassword);
+
         bttn = findViewById(R.id.slogin);
         navigate = findViewById(R.id.reg);
         sAuth = FirebaseAuth.getInstance();
         pb=findViewById(R.id.progressbar);
+        
         navigate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
