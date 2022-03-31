@@ -4,21 +4,32 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#00BCD4"
     tools:context=".Edtobjective">
 
     <RelativeLayout
         android:layout_width="match_parent"
-
         android:layout_height="match_parent">
+
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/topbar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="#0094CC"
-            app:menu="@menu/dv05t1" />
+            app:menu="@menu/menus">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Perfomance targets"
+                android:textColor="@color/white"
+                android:textSize="23sp" />
+        </androidx.appcompat.widget.Toolbar>
 
 <RelativeLayout
+
     android:id="@+id/sll2"
+    android:visibility="visible"
     android:layout_below="@id/topbar"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -26,72 +37,162 @@
     android:orientation="horizontal"
     >
 
-    <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/indicator1a"
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/a1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:gravity="center"
-        android:hint="Ojective one "
-        android:textColor="@color/black"
-        android:textSize="23sp" />
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:background="@color/white"
+        android:hint="Your Name "
+        android:paddingTop="15dp"
+        android:textColorHint="@color/black">
 
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/nameId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:textSize="23sp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/a"
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_below="@+id/a1"
+        android:layout_marginEnd="20dp"
+        android:background="@color/white"
+        android:hint="Ojective one "
+        android:textColorHint="@color/black"
+        android:paddingTop="15dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/indicator1a"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:textSize="23sp" />
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/b"
+        android:layout_width="match_parent"
+        android:layout_below="@id/a"
+        android:layout_marginTop="5dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:background="@color/white"
+        android:hint="Indicators agreed"
+        android:textColorHint="@color/black"
+        android:paddingTop="15dp">
     <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/viewmore1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/indicator1a"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         android:gravity="center"
-        android:hint="Indicators agreed"
         android:textColor="@color/black"
         android:textSize="23sp" />
-
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/c"
+        android:layout_width="match_parent"
+        android:layout_below="@id/b"
+        android:layout_marginTop="5dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:background="@color/white"
+        android:hint="proof of result"
+        android:textColorHint="@color/black"
+        android:paddingTop="15dp">
     <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/proof1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/viewmore1"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
-        android:textSize="23sp"
         android:gravity="center"
-        android:hint="proof of result" />
-
+        android:textSize="23sp" />
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/d"
+        android:layout_width="match_parent"
+        android:layout_below="@id/c"
+        android:layout_marginTop="5dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:background="@color/white"
+        android:hint="Agreed perfomance targets"
+        android:textColorHint="@color/black"
+        android:paddingTop="15dp">
     <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/Agreedperformance"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/proof1"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:textSize="23sp"
-        android:gravity="center"
-        android:hint="Agreed perfomance targets" />
 
+        android:layout_marginLeft="20dp"
+        android:inputType="number"
+        android:layout_marginRight="20dp"
+        android:gravity="center"
+
+        android:textSize="23sp" />
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/e"
+        android:layout_width="match_parent"
+        android:layout_below="@id/d"
+        android:layout_marginTop="5dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:background="@color/white"
+        android:hint="self appraisal mark"
+        android:textColorHint="@color/black"
+        android:paddingTop="15dp">
     <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/selfmark1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/Agreedperformance"
+
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         android:gravity="center"
-        android:hint="self appraisal mark"
+
         android:inputType="number"
         android:textSize="23sp" />
+    </com.google.android.material.textfield.TextInputLayout>
         </RelativeLayout>
         <RelativeLayout
             android:id="@+id/sl2"
+            android:visibility="gone"
             android:layout_below="@id/sll2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="25dp"
             android:orientation="horizontal"
             >
-
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/b1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:background="@color/white"
+                android:hint="Ojective one "
+                android:paddingTop="15dp"
+                android:textColorHint="@color/black">
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/indicator2a"
                 android:layout_width="match_parent"
@@ -99,66 +200,110 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
                 android:gravity="center"
-                android:hint="Ojective two "
                 android:textColor="@color/black"
                 android:textSize="23sp" />
-
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/b2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_below="@id/b1"
+                android:layout_marginEnd="20dp"
+                android:background="@color/white"
+                android:hint="Indicators agreed"
+                android:paddingTop="15dp"
+                android:textColorHint="@color/black">
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/viewmore2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/indicator2a"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
                 android:gravity="center"
-                android:hint="Indicators agreed"
                 android:textColor="@color/black"
                 android:textSize="23sp" />
-
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/b3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_below="@id/b2"
+                android:layout_marginEnd="20dp"
+                android:background="@color/white"
+                android:hint="proof of result"
+                android:paddingTop="15dp"
+                android:textColorHint="@color/black">
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/proof2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/viewmore2"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
                 android:gravity="center"
-
-                android:hint="proof of result"
                 android:textSize="23sp" />
-
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/b4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_below="@id/b3"
+                android:layout_marginEnd="20dp"
+                android:background="@color/white"
+                android:hint="Agreed perfomance targets"
+                android:paddingTop="15dp"
+                android:textColorHint="@color/black">
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/Agreedperformance2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/proof2"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
                 android:gravity="center"
-                android:hint="Agreed perfomance targets"
                 android:textSize="23sp" />
-
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/b5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_below="@id/b4"
+                android:layout_marginEnd="20dp"
+                android:background="@color/white"
+                android:hint="self appraisal mark"
+                android:paddingTop="15dp"
+                android:textColorHint="@color/black">
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/Agreedperformance2"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
                 android:id="@+id/selfmark2"
                 android:gravity="center"
-                android:hint="self appraisal mark"
                 android:inputType="number"
-                android:textSize="23sp" />
+                android:textSize="23sp" /></com.google.android.material.textfield.TextInputLayout>
         </RelativeLayout>
         <RelativeLayout
             android:id="@+id/sll3"
+            android:visibility="gone"
             android:layout_below="@id/sl2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="25dp"
             android:orientation="horizontal"
             >
-
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/c1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:background="@color/white"
+                android:hint="Ojective three "
+                android:paddingTop="15dp"
+                android:textColorHint="@color/black">
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/indicator3a"
                 android:layout_width="match_parent"
@@ -167,23 +312,42 @@
                 android:layout_marginRight="20dp"
                 android:gravity="center"
                 android:inputType="text"
-                android:hint="Ojective three "
                 android:textColor="@color/black"
                 android:textSize="23sp" />
-
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/c2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_below="@+id/c1"
+                android:background="@color/white"
+                android:hint="Indicators agreed"
+                android:paddingTop="15dp"
+                android:textColorHint="@color/black">
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/viewmore3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/indicator3a"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
                 android:gravity="center"
                 android:inputType="text"
-                android:hint="Indicators agreed"
                 android:textColor="@color/black"
                 android:textSize="23sp" />
-
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/c3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:background="@color/white"
+                android:layout_below="@+id/c2"
+                android:hint="proof of result"
+                android:paddingTop="15dp"
+                android:textColorHint="@color/black">
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/proof3"
                 android:layout_width="match_parent"
@@ -194,38 +358,74 @@
                 android:inputType="text"
                 android:textSize="23sp"
                 android:gravity="center"
-                android:hint="proof of result" />
+                />
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/c4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:background="@color/white"
+                android:layout_below="@+id/c3"
+                android:hint="Agreed perfomance targets"
+                android:paddingTop="15dp"
+                android:textColorHint="@color/black">
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/Agreedperformance3"
-                android:layout_below="@id/proof3"
                 android:inputType="number"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
                 android:textSize="23sp"
                 android:gravity="center"
-                android:hint="Agreed perfomance targets" />
-            <com.google.android.material.textfield.TextInputEditText
+                 />
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/c5"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/Agreedperformance3"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:background="@color/white"
+                android:layout_below="@+id/c4"
+                android:hint="Agreed perfomance targets"
+                android:paddingTop="15dp"
+                android:textColorHint="@color/black">
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:id="@+id/selfmark3"
+                android:layout_height="wrap_content"
+
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
                 android:gravity="center"
                 android:textSize="23sp"
                 android:inputType="number"
                 android:hint="self appraisal mark" />
+
+        </com.google.android.material.textfield.TextInputLayout>
         </RelativeLayout>
         <RelativeLayout
             android:id="@+id/sll4"
+            android:visibility="gone"
             android:layout_below="@id/sll3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="25dp"
             android:orientation="horizontal"
             >
-
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/d1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:background="@color/white"
+                android:hint="Agreed perfomance targets"
+                android:paddingTop="15dp"
+                android:textColorHint="@color/black">
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/indicator4a"
                 android:layout_width="match_parent"
@@ -234,62 +434,115 @@
                 android:layout_marginRight="20dp"
                 android:gravity="center"
                 android:inputType="text"
-                android:hint="Ojective three "
                 android:textColor="@color/black"
                 android:textSize="23sp" />
-
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/d2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_below="@id/d1"
+                android:layout_marginEnd="20dp"
+                android:background="@color/white"
+                android:hint="Indicators agreed"
+                android:paddingTop="15dp"
+                android:textColorHint="@color/black">
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/viewmore4"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/indicator4a"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
                 android:gravity="center"
                 android:inputType="text"
-                android:hint="Indicators agreed"
                 android:textColor="@color/black"
                 android:textSize="23sp" />
-
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/d3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:background="@color/white"
+                android:layout_below="@+id/d2"
+                android:hint="Agreed perfomance targets"
+                android:paddingTop="15dp"
+                android:textColorHint="@color/black">
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/proof4"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/viewmore4"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
                 android:inputType="text"
                 android:gravity="center"
                 android:hint="proof of result" />
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/d4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:background="@color/white"
+                android:layout_below="@+id/d3"
+                android:hint="Agreed perfomance targets"
+                android:paddingTop="15dp"
+                android:textColorHint="@color/black">
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/Agreedperformance4"
-                android:layout_below="@id/proof4"
                 android:inputType="number"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
                 android:gravity="center"
-                android:hint="Agreed perfomance targets" />
-            <com.google.android.material.textfield.TextInputEditText
+               />
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/d5"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/Agreedperformance4"
+                android:layout_marginStart="20dp"
+                android:layout_below="@+id/d4"
+                android:layout_marginEnd="20dp"
+                android:background="@color/white"
+                android:hint="self appraisal mark"
+                android:paddingTop="15dp"
+                android:textColorHint="@color/black">
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:id="@+id/selfmark4"
+                android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
                 android:gravity="center"
                 android:inputType="number"
-                android:hint="self appraisal mark" />
+                 />
+            </com.google.android.material.textfield.TextInputLayout>
         </RelativeLayout>
         <RelativeLayout
             android:id="@+id/sll5"
-            android:layout_below="@id/sl2"
+            android:visibility="gone"
+            android:layout_below="@id/sll4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="25dp"
+            android:gravity="center"
             android:orientation="horizontal"
             >
-
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/e1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:background="@color/white"
+                android:hint="Ojective five "
+                android:paddingTop="15dp"
+                android:textColorHint="@color/black">
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/indicator5a"
                 android:layout_width="match_parent"
@@ -298,53 +551,137 @@
                 android:layout_marginRight="20dp"
                 android:gravity="center"
                 android:inputType="text"
-                android:hint="Ojective three "
                 android:textColor="@color/black"
                 android:textSize="23sp" />
-
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/e2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_below="@+id/e1"
+                android:layout_marginEnd="20dp"
+                android:background="@color/white"
+                android:hint="Indicators agreed"
+                android:paddingTop="15dp"
+                android:textColorHint="@color/black">
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/viewmore5"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/indicator5a"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
                 android:gravity="center"
                 android:inputType="text"
-                android:hint="Indicators agreed"
                 android:textColor="@color/black"
                 android:textSize="23sp" />
-
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/e3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_below="@+id/e2"
+                android:layout_marginEnd="20dp"
+                android:background="@color/white"
+                android:hint="proof of result"
+                android:paddingTop="15dp"
+                android:textColorHint="@color/black">
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/proof5"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/viewmore5"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
                 android:inputType="text"
                 android:gravity="center"
-                android:hint="proof of result" />
+                />
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/e4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_below="@+id/e3"
+                android:layout_marginEnd="20dp"
+                android:background="@color/white"
+                android:hint="Agreed perfomance targets"
+                android:paddingTop="15dp"
+                android:textColorHint="@color/black">
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/Agreedperformance5"
-                android:layout_below="@id/proof5"
                 android:inputType="number"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
                 android:gravity="center"
-                android:hint="Agreed perfomance targets" />
+                 />
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/e5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_below="@+id/e4"
+                android:layout_marginEnd="20dp"
+                android:background="@color/white"
+                android:hint="self appraisal mark"
+                android:paddingTop="15dp"
+                android:textColorHint="@color/black">
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/Agreedperformance5"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
                 android:gravity="center"
+                android:id="@+id/selfmark5"
                 android:inputType="number"
-                android:hint="self appraisal mark" />
+                />
+            </com.google.android.material.textfield.TextInputLayout>
         </RelativeLayout>
+
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:id="@+id/floatl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/sll5"
+            android:layout_marginTop="10dp">
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/floatadd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@color/white" />
+
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+        <Button
+            android:id="@+id/sendtargets"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/floatl"
+            android:layout_centerInParent="false"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/buttonbackground"
+            android:gravity="center"
+            android:text="send" />
+
+        <Button
+            android:id="@+id/viewall"
+            android:layout_width="132dp"
+            android:layout_height="45dp"
+            android:layout_below="@id/floatl"
+            android:layout_alignParentEnd="true"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="13dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/buttonbackground"
+            android:gravity="center"
+            android:text="click to see all fields" />
+
     </RelativeLayout>
 
 </ScrollView>

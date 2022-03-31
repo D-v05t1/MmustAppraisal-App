@@ -2,6 +2,7 @@ package com.example.mmustappraisal;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -28,7 +29,7 @@ import java.util.Objects;
 public class Register extends AppCompatActivity {
 private TextInputEditText email,password,confirmnpasssword,personalno, faculty, unit,
         designation,jobgroup,speciladuty,supervisorname,username;
-private RadioGroup gender;
+private RadioGroup gender,userole;
 private Button register,loginme;
 private FirebaseAuth fAuth;
 private DatabaseReference dbref;
@@ -38,6 +39,8 @@ private ProgressBar pb;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
         pb=findViewById(R.id.pbar);
+        Toolbar toolbar =findViewById(R.id.topbar);
+        setSupportActionBar(toolbar);
         email=findViewById(R.id.regemail);
         username=findViewById(R.id.uname);
         password=findViewById(R.id.rpassword);
@@ -52,6 +55,7 @@ private ProgressBar pb;
         register=findViewById(R.id.regokay);
         loginme=findViewById(R.id.login);
         gender=findViewById(R.id.gen);
+        userole=findViewById(R.id.urole);
         fAuth =FirebaseAuth.getInstance();
         loginme.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -76,9 +80,13 @@ private ProgressBar pb;
                 String special = speciladuty.getText().toString();
                 String supervisor = supervisorname.getText().toString();
                 RadioButton sgender = gender.findViewById(checkedId);
+                RadioButton role=userole.findViewById(checkedId);
+                if(role==null){
+                    Toast.makeText(Register.this,"please select role",Toast.LENGTH_SHORT).show();
+                }
                 if (sgender == null) {
-                    Toast.makeText(Register.this, "select gender please", Toast.LENGTH_SHORT).show();
-                } else if (!usrmail.contains("@gmail.com")) {
+                    Toast.makeText(Register.this, "check the check box again", Toast.LENGTH_SHORT).show();
+                }  if (!((usrmail.contains("@gmail.com"))||(usrmail.contains("@yahoo.com")))) {
                     Toast.makeText(Register.this, "wrong mail format", Toast.LENGTH_SHORT).show();
 
                 } else if (TextUtils.isEmpty(usrmail) || TextUtils.isEmpty(pass) || TextUtils.isEmpty(confirm)
@@ -87,6 +95,8 @@ private ProgressBar pb;
                     Toast.makeText(Register.this, "Hello, check all fields please", Toast.LENGTH_SHORT).show();
                 } else {
                     final String gender = sgender.getText().toString();
+                    final String level=role.getText().toString();
+
                     create(usrmail, pass, no, fac,usrname, eunit, des, jobgrp, special, supervisor);
                 }
 
@@ -94,7 +104,7 @@ private ProgressBar pb;
         });
     }
 
-    private void create(String usrmail, String pass,String usrname, String no, String fac, String eunit, String des, String jobgrp, String special, String supervisor) {
+    private void create(String usrmail, String pass, String usrname,  String no, String fac, String eunit, String des, String jobgrp, String special, String supervisor) {
         pb.setVisibility(View.VISIBLE);
         fAuth.createUserWithEmailAndPassword(usrmail,pass).addOnCompleteListener(new OnCompleteListener<AuthResult>(){
     @Override
@@ -118,6 +128,7 @@ private ProgressBar pb;
                 hashmap.put("jobgrp", jobgrp);
                 hashmap.put("special", special);
                 hashmap.put("supervisor", supervisor);
+
                 dbref.setValue(hashmap).addOnCompleteListener(new OnCompleteListener<Void>() {
                     @Override
                     public void onComplete(@NonNull Task<Void> task) {
@@ -147,4 +158,3 @@ private ProgressBar pb;
 
 
         }
-/**/

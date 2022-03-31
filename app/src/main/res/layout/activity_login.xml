@@ -11,7 +11,17 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="#0094CC"
-        app:menu="@menu/dv05t1" />
+        app:menu="@menu/menu_m" >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="login"
+            android:textStyle="bold"
+            android:textAllCaps="true"
+            android:layout_gravity="center"
+            android:textSize="23sp"
+            android:textColor="@color/white"/>
+    </androidx.appcompat.widget.Toolbar>
     <LinearLayout
         android:id="@+id/l1"
         android:layout_below="@id/topbar"

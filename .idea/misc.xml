@@ -9,18 +9,22 @@
         <entry key="..\:/MmustAppraisal/app/src/main/res/drawable/home.xml" value="0.1815" />
         <entry key="..\:/MmustAppraisal/app/src/main/res/drawable/logout.xml" value="0.1815" />
         <entry key="..\:/MmustAppraisal/app/src/main/res/drawable/setting.xml" value="0.1815" />
-        <entry key="..\:/MmustAppraisal/app/src/main/res/layout/activity_edtobjective.xml" value="0.22" />
+        <entry key="..\:/MmustAppraisal/app/src/main/res/layout/activity_admin.xml" value="0.1814814814814815" />
+        <entry key="..\:/MmustAppraisal/app/src/main/res/layout/activity_edtobjective.xml" value="0.33" />
         <entry key="..\:/MmustAppraisal/app/src/main/res/layout/activity_edtraining.xml" value="0.1814814814814815" />
         <entry key="..\:/MmustAppraisal/app/src/main/res/layout/activity_edttargets.xml" value="0.1814814814814815" />
         <entry key="..\:/MmustAppraisal/app/src/main/res/layout/activity_edtvandcovalues.xml" value="0.1814814814814815" />
         <entry key="..\:/MmustAppraisal/app/src/main/res/layout/activity_employeeedt.xml" value="0.1814814814814815" />
-        <entry key="..\:/MmustAppraisal/app/src/main/res/layout/activity_login.xml" value="0.2222222222222222" />
-        <entry key="..\:/MmustAppraisal/app/src/main/res/layout/activity_main.xml" value="0.25" />
-        <entry key="..\:/MmustAppraisal/app/src/main/res/layout/activity_register.xml" value="0.31715210355987056" />
+        <entry key="..\:/MmustAppraisal/app/src/main/res/layout/activity_login.xml" value="0.1" />
+        <entry key="..\:/MmustAppraisal/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/MmustAppraisal/app/src/main/res/layout/activity_register.xml" value="0.2683093771389459" />
         <entry key="..\:/MmustAppraisal/app/src/main/res/layout/login.xml" value="0.14479638009049775" />
         <entry key="..\:/MmustAppraisal/app/src/main/res/layout/objectives.xml" value="0.25" />
         <entry key="..\:/MmustAppraisal/app/src/main/res/layout/register.xml" value="0.1" />
         <entry key="..\:/MmustAppraisal/app/src/main/res/menu/dv05t1.xml" value="0.33" />
+        <entry key="..\:/MmustAppraisal/app/src/main/res/menu/memu_main.xml" value="0.1" />
+        <entry key="..\:/MmustAppraisal/app/src/main/res/menu/menu_m.xml" value="0.1" />
+        <entry key="..\:/MmustAppraisal/app/src/main/res/menu/menus.xml" value="0.1" />
         <entry key="..\:/MmustAppraisal/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1815" />
       </map>
     </option>
