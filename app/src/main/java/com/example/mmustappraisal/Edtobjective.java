@@ -77,8 +77,8 @@ public class Edtobjective extends AppCompatActivity {
         objective_view2=findViewById(R.id.sl2);
         objective_view1=findViewById(R.id.sll2);
         objective_view3=findViewById(R.id.sll3);
-        objective_view3=findViewById(R.id.sll4);
-        objective_view3=findViewById(R.id.sll5);
+        objective_view4=findViewById(R.id.sll4);
+        objective_view5=findViewById(R.id.sll5);
         viewall=findViewById(R.id.viewall);
 
         seeview=true;

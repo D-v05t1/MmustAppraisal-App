@@ -1,18 +1,134 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#00BCD4"
+    android:background="#7C00BCD4"
     tools:context=".Edtraining">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/topbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="#0094CC"
-        app:menu="@menu/menus" />
+        app:menu="@menu/menus" >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="23sp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:text="TRAINING"
+            />
+    </androidx.appcompat.widget.Toolbar>
 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_below="@id/topbar"
+        android:layout_height="wrap_content"
+        android:id="@+id/tl1">
 
+        <com.google.android.material.textfield.TextInputLayout
+
+            android:id="@+id/tbl1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/edittextbackground"
+            android:hint="Agreed training"
+            android:textColorHint="@color/black"
+            app:tabTextColor="@color/black"
+
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/trainingagreed"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="2dp"
+                android:background="@drawable/edittextbackground"
+                android:importantForAutofill="no"
+                android:inputType="text"
+                android:paddingTop="15dp"
+
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+
+            android:id="@+id/tbl2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tbl1"
+            android:textColorHint="@color/black"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/edittextbackground"
+            android:hint="Training duration"
+            app:tabTextColor="@color/black">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/traininduration"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="2dp"
+                android:background="@drawable/edittextbackground"
+                android:importantForAutofill="no"
+                android:inputType="text"
+                android:paddingTop="15dp"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tbl3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tbl2"
+            android:textColorHint="@color/black"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/edittextbackground"
+            android:hint="Comments"
+            app:tabTextColor="@color/black"
+
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/trainingcomments"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="2dp"
+                android:background="@drawable/edittextbackground"
+                android:importantForAutofill="no"
+                android:inputType="text"
+                android:paddingTop="15dp"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/trainingsend"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tbl3"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/buttonbackground"
+            android:text="send" />
+    </RelativeLayout>
 </RelativeLayout>
+
+</ScrollView>

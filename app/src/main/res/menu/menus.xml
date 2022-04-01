@@ -14,8 +14,8 @@
         android:icon="@drawable/account"/>
 <item
     android:id="@+id/logout"
-android:title="logout"
-app:showAsAction="ifRoom"
+    android:title="logout"
+    app:showAsAction="always"
     android:icon="@drawable/logout"
     />
 

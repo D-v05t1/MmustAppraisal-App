@@ -52,6 +52,7 @@ private FirebaseDatabase db;
         sAuth = FirebaseAuth.getInstance();
         pb=findViewById(R.id.progressbar);
 
+        getSupportActionBar().setDisplayShowTitleEnabled(false);
         navigate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

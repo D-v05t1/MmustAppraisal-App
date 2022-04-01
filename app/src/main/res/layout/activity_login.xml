@@ -4,23 +4,25 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#00BCD4"
+    android:background="#7C00BCD4"
     tools:context=".login">
+
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/topbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="#0094CC"
-        app:menu="@menu/menu_m" >
+        app:menu="@menu/menu_m">
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="login"
-            android:textStyle="bold"
-            android:textAllCaps="true"
             android:layout_gravity="center"
+            android:text="login"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
             android:textSize="23sp"
-            android:textColor="@color/white"/>
+            android:textStyle="bold" />
     </androidx.appcompat.widget.Toolbar>
     <LinearLayout
         android:id="@+id/l1"
@@ -37,14 +39,17 @@
             android:layout_marginStart="20dp"
             android:layout_marginEnd="20dp"
             android:hint="Enter Your Email"
+            android:background="@drawable/edittextbackground"
             android:textColorHint="@color/black"
-            android:paddingTop="35dp">
+            >
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/lemail"
+                android:paddingTop="15dp"
                 android:layout_width="match_parent"
+                android:layout_marginStart="3dp"
                 android:layout_height="wrap_content"
-                android:background="@color/white"
+                android:background="@drawable/edittextbackground"
                 android:textColor="@color/white"
                 android:importantForAutofill="no"
                 android:inputType="textEmailAddress"
@@ -76,17 +81,21 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
             android:layout_marginEnd="20dp"
+            android:layout_marginTop="15dp"
+            app:tabTextColor="@color/black"
             android:hint="Enter Your Password"
-            android:paddingTop="35dp"
+            android:background="@drawable/edittextbackground"
             android:textColorHint="@color/black">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/lpassword"
+                android:paddingTop="15dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@color/white"
+                android:background="@drawable/edittextbackground"
                 android:importantForAutofill="no"
                 android:inputType="textEmailAddress"
+                android:layout_marginStart="3dp"
                 android:textColor="#ffffff"
                 android:textSize="18sp" />
         </com.google.android.material.textfield.TextInputLayout>
@@ -128,9 +137,10 @@
             android:layout_marginStart="20dp"
             android:layout_marginEnd="20dp"
             android:gravity="center"
+
             android:text="No Account? register here"
             android:textSize="18sp"
-            android:textColor="@color/white"/>
+            android:textColor="@color/black"/>
 
 
 

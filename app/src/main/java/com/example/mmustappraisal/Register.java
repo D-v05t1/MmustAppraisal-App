@@ -56,11 +56,13 @@ private ProgressBar pb;
         loginme=findViewById(R.id.login);
         gender=findViewById(R.id.gen);
         userole=findViewById(R.id.urole);
+        getSupportActionBar().setDisplayShowTitleEnabled(false);
+
         fAuth =FirebaseAuth.getInstance();
         loginme.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-          Intent p=new Intent(Register.this,login.class);
+          Intent p=new Intent(Register.this,Edtobjective.class);
           startActivity(p);
             }
         });
@@ -76,6 +78,7 @@ private ProgressBar pb;
                 String eunit = unit.getText().toString();
                 String des = designation.getText().toString();
                 int checkedId = gender.getCheckedRadioButtonId();
+                int checkme=userole.getCheckedRadioButtonId();
                 String jobgrp = jobgroup.getText().toString();
                 String special = speciladuty.getText().toString();
                 String supervisor = supervisorname.getText().toString();
@@ -84,16 +87,21 @@ private ProgressBar pb;
                 if(role==null){
                     Toast.makeText(Register.this,"please select role",Toast.LENGTH_SHORT).show();
                 }
+
                 if (sgender == null) {
                     Toast.makeText(Register.this, "check the check box again", Toast.LENGTH_SHORT).show();
-                }  if (!((usrmail.contains("@gmail.com"))||(usrmail.contains("@yahoo.com")))) {
+                }
+
+                if (!(usrmail.contains("@gmail.com"))) {
                     Toast.makeText(Register.this, "wrong mail format", Toast.LENGTH_SHORT).show();
 
-                } else if (TextUtils.isEmpty(usrmail) || TextUtils.isEmpty(pass) || TextUtils.isEmpty(confirm)
+                }
+                else if (TextUtils.isEmpty(usrmail) || TextUtils.isEmpty(pass) || TextUtils.isEmpty(confirm)
                         || TextUtils.isEmpty(no)||TextUtils.isEmpty(usrname) || TextUtils.isEmpty(fac) || TextUtils.isEmpty(eunit) || TextUtils.isEmpty(des) ||
                         TextUtils.isEmpty(jobgrp) || TextUtils.isEmpty(special) || TextUtils.isEmpty(supervisor)) {
                     Toast.makeText(Register.this, "Hello, check all fields please", Toast.LENGTH_SHORT).show();
-                } else {
+                }
+                else {
                     final String gender = sgender.getText().toString();
                     final String level=role.getText().toString();
 
@@ -134,13 +142,12 @@ private ProgressBar pb;
                     public void onComplete(@NonNull Task<Void> task) {
                         pb.setVisibility(View.GONE);
                         if (task.isSuccessful()) {
+
                             Intent r = new Intent(Register.this, login.class);
                             r.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
                             startActivity(r);
-                            finish();
-                        } else {
-                            Toast.makeText(Register.this, Objects.requireNonNull(task.getException().getMessage()), Toast.LENGTH_SHORT).show();
-                        }
+                            finish();}
+
 
                     }
                 });}

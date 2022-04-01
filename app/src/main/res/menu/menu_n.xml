@@ -1,17 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk">
-
+    xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
         android:id="@+id/account"
         android:title="Account"
         app:showAsAction="ifRoom"
         android:icon="@drawable/account"/>
-<item
-    android:id="@+id/logout"
-android:title="logout"
-app:showAsAction="ifRoom"
-    android:icon="@drawable/logout"
-    />
-
+    <item
+        android:id="@+id/logout"
+        android:title="logout"
+        app:showAsAction="ifRoom"
+        android:icon="@drawable/logout"
+        />
 </menu>
