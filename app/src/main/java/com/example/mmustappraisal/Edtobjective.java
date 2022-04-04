@@ -39,6 +39,8 @@ public class Edtobjective extends AppCompatActivity {
         setContentView(R.layout.activity_edtobjective);
         Toolbar toolbar =findViewById(R.id.topbar);
         setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayShowTitleEnabled(false);
+
         fd=FirebaseDatabase.getInstance();
         dr=fd.getReference("Objectives");
         name=findViewById(R.id.nameId);
