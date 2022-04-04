@@ -1,6 +1,7 @@
 package com.example.mmustappraisal;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -18,6 +19,11 @@ private Button goals,targets,dev,values;
         targets=findViewById(R.id.targets);
         dev=findViewById(R.id.training);
         values=findViewById(R.id.values);
+
+        Toolbar toolbar =findViewById(R.id.topbar);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayShowTitleEnabled(false);
+
         goals.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

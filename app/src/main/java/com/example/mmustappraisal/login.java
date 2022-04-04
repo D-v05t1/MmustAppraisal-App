@@ -43,6 +43,7 @@ private FirebaseDatabase db;
         setContentView(R.layout.activity_login);
         Toolbar toolbar =findViewById(R.id.topbar);
         setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayShowTitleEnabled(false);
         db= FirebaseDatabase.getInstance();
         Email = findViewById(R.id.lemail);
         Password = findViewById(R.id.lpassword);
@@ -56,7 +57,7 @@ private FirebaseDatabase db;
         navigate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent p = new Intent(login.this, Register.class);
+                Intent p = new Intent(login.this, Edtvandcovalues.class);
                 startActivity(p);
             }
         });

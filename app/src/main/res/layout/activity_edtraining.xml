@@ -27,10 +27,10 @@
     </androidx.appcompat.widget.Toolbar>
 
     <RelativeLayout
+        android:id="@+id/tl1"
         android:layout_width="match_parent"
-        android:layout_below="@id/topbar"
         android:layout_height="wrap_content"
-        android:id="@+id/tl1">
+        android:layout_below="@id/topbar">
 
         <com.google.android.material.textfield.TextInputLayout
 
@@ -68,12 +68,12 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/tbl1"
-            android:textColorHint="@color/black"
             android:layout_marginStart="20dp"
             android:layout_marginTop="15dp"
             android:layout_marginEnd="20dp"
             android:background="@drawable/edittextbackground"
             android:hint="Training duration"
+            android:textColorHint="@color/black"
             app:tabTextColor="@color/black">
 
             <com.google.android.material.textfield.TextInputEditText
@@ -95,12 +95,12 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/tbl2"
-            android:textColorHint="@color/black"
             android:layout_marginStart="20dp"
             android:layout_marginTop="15dp"
             android:layout_marginEnd="20dp"
             android:background="@drawable/edittextbackground"
             android:hint="Comments"
+            android:textColorHint="@color/black"
             app:tabTextColor="@color/black"
 
             >

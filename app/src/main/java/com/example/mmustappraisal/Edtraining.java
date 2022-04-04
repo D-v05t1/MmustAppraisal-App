@@ -2,6 +2,7 @@ package com.example.mmustappraisal;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -29,6 +30,10 @@ public class Edtraining extends AppCompatActivity {
         duration=findViewById(R.id.traininduration);
         agreed_Training=findViewById(R.id.trainingagreed);
         send=findViewById(R.id.trainingsend);
+
+        Toolbar toolbar =findViewById(R.id.topbar);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayShowTitleEnabled(false);
 
         send.setOnClickListener(new View.OnClickListener() {
             @Override
