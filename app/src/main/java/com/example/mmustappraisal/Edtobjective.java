@@ -42,7 +42,7 @@ public class Edtobjective extends AppCompatActivity {
         getSupportActionBar().setDisplayShowTitleEnabled(false);
 
         fd=FirebaseDatabase.getInstance();
-        dr=fd.getReference("Objectives");
+        dr=fd.getReference().child("Objectives");
         name=findViewById(R.id.nameId);
         perfomance_I5=findViewById(R.id.indicator5a);
         Agreed_per_I5=findViewById(R.id.viewmore5);
@@ -137,34 +137,35 @@ public class Edtobjective extends AppCompatActivity {
            String perfomance_Objective1=perfomance_I1.getText().toString();
            String agreed_Perfomance1=Agreed_per_I1.getText().toString();
            String perfomance_proof1=proof1.getText().toString();
-           String percentage_Targets1=Agreed_target1.toString();
+           String percentage_Targets1=Agreed_target1.getText().toString();
            String self_Awardmark1=selfmark1.getText().toString();
 
                 String perfomance_Objective2=perfomance_I2.getText().toString();
                 String agreed_Perfomance2=Agreed_per_I2.getText().toString();
                 String perfomance_proof2=proof2.getText().toString();
-                String percentage_Targets2=Agreed_target2.toString();
+                String percentage_Targets2=Agreed_target2.getText().toString();
                 String self_Awardmark2=selfmark2.getText().toString();
 
                 String perfomance_Objective3=perfomance_I3.getText().toString();
                 String agreed_Perfomance3=Agreed_per_I3.getText().toString();
                 String perfomance_proof3=proof3.getText().toString();
-                String percentage_Targets3=Agreed_target3.toString();
+                String percentage_Targets3=Agreed_target3.getText().toString();
                 String self_Awardmark3=selfmark3.getText().toString();
 
                 String perfomance_Objective4=perfomance_I4.getText().toString();
                 String agreed_Perfomance4=Agreed_per_I4.getText().toString();
                 String perfomance_proof4=proof4.getText().toString();
-                String percentage_Targets4=Agreed_target4.toString();
+                String percentage_Targets4=Agreed_target4.getText().toString();
                 String self_Awardmark4=selfmark4.getText().toString();
 
                 String perfomance_Objective5=perfomance_I5.getText().toString();
                 String agreed_Perfomance5=Agreed_per_I5.getText().toString();
                 String perfomance_proof5=proof5.getText().toString();
-                String percentage_Targets5=Agreed_target5.toString();
+                String percentage_Targets5=Agreed_target5.getText().toString();
                 String self_Awardmark5=selfmark5.getText().toString();
                     objectiveOwnerId=names;
-                Objective_Modal objective_modal=new Objective_Modal(perfomance_Objective1, names, agreed_Perfomance1, perfomance_proof1, percentage_Targets1,
+                Objective_Modal objective_modal=new Objective_Modal(perfomance_Objective1, names, agreed_Perfomance1,
+                        perfomance_proof1, percentage_Targets1,
                         self_Awardmark1, perfomance_Objective2, agreed_Perfomance2, perfomance_proof2,
                         percentage_Targets2, self_Awardmark2, perfomance_Objective3, agreed_Perfomance3,
                         perfomance_proof3, percentage_Targets3, self_Awardmark3, perfomance_Objective4,

@@ -11,6 +11,7 @@ import android.widget.Button;
 import android.widget.Toast;
 
 import com.google.android.material.textfield.TextInputEditText;
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -30,11 +31,13 @@ public class Edtraining extends AppCompatActivity {
         duration=findViewById(R.id.traininduration);
         agreed_Training=findViewById(R.id.trainingagreed);
         send=findViewById(R.id.trainingsend);
-
+        firebaseDatabase=FirebaseDatabase.getInstance();
+        dref=firebaseDatabase.getReference().child("training");
         Toolbar toolbar =findViewById(R.id.topbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayShowTitleEnabled(false);
 
+        String currentUserUid = FirebaseAuth.getInstance().getCurrentUser().getUid();
         send.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
