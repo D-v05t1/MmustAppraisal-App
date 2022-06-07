@@ -8,8 +8,8 @@ android {
 
     defaultConfig {
         applicationId "com.example.mmustappraisal"
-        minSdk 21
-        targetSdk 32
+        minSdk 27
+        targetSdk 31
         versionCode 1
         versionName "1.0"
 

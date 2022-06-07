@@ -14,8 +14,7 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.android.car.ui.toolbar.MenuItem;
-import com.firebase.ui.auth.viewmodel.AuthViewModelBase;
+
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.android.material.textfield.TextInputEditText;
@@ -23,12 +22,6 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.firestore.DocumentReference;
-import com.google.firebase.ktx.Firebase;
-
-import org.w3c.dom.Document;
-
-import java.util.Objects;
 
 public class login extends AppCompatActivity {
 private TextInputEditText Email,Password;
@@ -57,7 +50,7 @@ private FirebaseDatabase db;
         navigate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent p = new Intent(login.this, Edtvandcovalues.class);
+                Intent p = new Intent(login.this, Register.class);
                 startActivity(p);
             }
         });

@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+
 public class MainActivity extends AppCompatActivity {
 private Button goals,targets,dev,values;
 
@@ -48,7 +49,7 @@ private Button goals,targets,dev,values;
         values.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent v=new Intent(MainActivity.this,Edtvandcovalues.class);
+                Intent v=new Intent(MainActivity.this, Edtvandcovalues.class);
                 startActivity(v);
             }
         });
