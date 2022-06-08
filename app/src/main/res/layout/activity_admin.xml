@@ -6,24 +6,8 @@
     android:layout_height="match_parent"
     android:background="#00BCD4"
     tools:context=".Admin">
-<androidx.appcompat.widget.Toolbar
-        android:id="@+id/topbar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="#0094CC"
-        app:menu="@menu/memu_main">
 
-        <androidx.appcompat.widget.SearchView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
-    </androidx.appcompat.widget.Toolbar>
-<Button
-    android:id="@+id/user"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
 
-    android:background="@drawable/buttonbackground"
-    android:gravity="center"
-    android:text="send" ></Button>
+
 
 </ScrollView>
