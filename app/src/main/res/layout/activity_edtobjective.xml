@@ -34,7 +34,7 @@
             android:layout_below="@id/topbar"
             android:layout_marginTop="15dp"
             android:orientation="horizontal"
-            android:visibility="gone">
+            android:visibility="visible">
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/a1"
@@ -549,7 +549,7 @@
         </RelativeLayout>
         <RelativeLayout
             android:id="@+id/sll5"
-            android:visibility="visible"
+            android:visibility="gone"
             android:layout_below="@id/sll4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

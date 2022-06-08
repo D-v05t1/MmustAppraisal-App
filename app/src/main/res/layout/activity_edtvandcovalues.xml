@@ -646,21 +646,24 @@
                 android:text="customer focus"
                 android:textColor="@color/black"
                 android:textSize="23sp" />
+
             <androidx.cardview.widget.CardView
+                android:id="@+id/cardr1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
-                android:layout_marginEnd="20dp"
-                android:background="@color/white"
                 android:layout_below="@id/customer"
-                android:id="@+id/cardr1"
+                android:layout_marginStart="35dp"
+                android:layout_marginEnd="35dp"
+                android:background="#00BCD4"
                 app:cardCornerRadius="8dp">
+
                 <RadioGroup
                     android:id="@+id/radior1"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:layout_marginStart="20dp"
-                    android:layout_marginEnd="20dp">
+                    android:layout_marginEnd="20dp"
+                    android:background="#00BCD4">
 
                     <RadioButton
                         android:id="@+id/ifive"
@@ -732,8 +735,8 @@
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
-                android:layout_marginEnd="20dp"
+                android:layout_marginStart="35dp"
+                android:layout_marginEnd="35dp"
                 android:background="@color/white"
                 android:layout_below="@id/proffessionalism"
                 android:id="@+id/cardr2"
@@ -742,8 +745,8 @@
                     android:id="@+id/radior2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="20dp"
-                    android:layout_marginEnd="20dp">
+                    android:layout_marginStart="35dp"
+                    android:layout_marginEnd="35dp">
 
                     <RadioButton
                         android:id="@+id/iifive"
@@ -815,8 +818,8 @@
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
-                android:layout_marginEnd="20dp"
+                android:layout_marginStart="35dp"
+                android:layout_marginEnd="35dp"
                 android:background="@color/white"
                 android:layout_below="@id/technical"
                 android:id="@+id/cardr3"
@@ -899,8 +902,8 @@
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
-                android:layout_marginEnd="20dp"
+                android:layout_marginStart="35dp"
+                android:layout_marginEnd="35dp"
                 android:background="@color/white"
                 android:layout_below="@id/teamwork"
                 android:id="@+id/cardr4"
@@ -982,8 +985,8 @@
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
-                android:layout_marginEnd="20dp"
+                android:layout_marginStart="35dp"
+                android:layout_marginEnd="35dp"
                 android:background="@color/white"
                 android:layout_below="@id/time"
                 android:id="@+id/cardr5"
@@ -1065,8 +1068,8 @@
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
-                android:layout_marginEnd="20dp"
+                android:layout_marginStart="35dp"
+                android:layout_marginEnd="35dp"
                 android:background="@color/white"
                 android:layout_below="@id/continous"
                 android:id="@+id/cardr6"

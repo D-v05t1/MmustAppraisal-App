@@ -27,9 +27,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/topbar"
-        android:layout_marginStart="25dp"
+        android:layout_marginStart="50dp"
         android:layout_marginTop="50dp"
-        android:layout_marginEnd="25dp"
+        android:layout_marginEnd="50dp"
         android:background="@drawable/buttonbackground"
         android:text="GOALS" />
 
@@ -38,9 +38,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/obj"
-        android:layout_marginStart="25dp"
+        android:layout_marginStart="50dp"
         android:layout_marginTop="50dp"
-        android:layout_marginEnd="25dp"
+        android:layout_marginEnd="50dp"
         android:background="@drawable/buttonbackground"
         android:text="targets" />
 
@@ -49,9 +49,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/targets"
-        android:layout_marginStart="25dp"
+        android:layout_marginStart="50dp"
         android:layout_marginTop="50dp"
-        android:layout_marginEnd="25dp"
+        android:layout_marginEnd="50dp"
         android:background="@drawable/buttonbackground"
         android:text="training and development" />
 
@@ -60,9 +60,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/training"
-        android:layout_marginStart="25dp"
+        android:layout_marginStart="50dp"
         android:layout_marginTop="50dp"
-        android:layout_marginEnd="25dp"
+        android:layout_marginEnd="50dp"
         android:background="@drawable/buttonbackground"
         android:text="values and co-values" />
 </RelativeLayout>

@@ -13,14 +13,13 @@
         android:layout_height="wrap_content"
         android:background="#0094CC"
         app:menu="@menu/menus" />
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello  welcome test"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true"
-        android:textSize="18sp"
+        android:layout_centerInParent="true"
         android:fontFamily="sans-serif-condensed"
-        />
+        android:text="Hello  welcome test"
+        android:textSize="18sp" />
 
 </RelativeLayout>

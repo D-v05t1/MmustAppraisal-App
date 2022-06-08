@@ -36,8 +36,8 @@
             android:id="@+id/loginemail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
-            android:layout_marginEnd="20dp"
+            android:layout_marginStart="35dp"
+            android:layout_marginEnd="35dp"
             android:hint="Enter Your Email"
             android:background="@drawable/edittextbackground"
             android:textColorHint="@color/black"
@@ -79,8 +79,8 @@
             android:id="@+id/lloginpassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
-            android:layout_marginEnd="20dp"
+            android:layout_marginStart="35dp"
+            android:layout_marginEnd="35dp"
             android:layout_marginTop="15dp"
             app:tabTextColor="@color/black"
             android:hint="Enter Your Password"
@@ -96,7 +96,7 @@
                 android:importantForAutofill="no"
                 android:inputType="textEmailAddress"
                 android:layout_marginStart="3dp"
-                android:textColor="#ffffff"
+                android:textColor="#FFFFFF"
                 android:textSize="18sp" />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -116,7 +116,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/buttonbackground"
-
             android:gravity="center"
             android:text="login" />
     </LinearLayout>
@@ -137,10 +136,9 @@
             android:layout_marginStart="20dp"
             android:layout_marginEnd="20dp"
             android:gravity="center"
-
             android:text="No Account? register here"
             android:textSize="18sp"
-            android:textColor="@color/black"/>
+            android:textColor="#51F300"/>
 
 
 

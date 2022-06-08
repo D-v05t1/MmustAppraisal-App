@@ -29,72 +29,63 @@
         </androidx.appcompat.widget.Toolbar>
 
 
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/Rl1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/topbar"
+            android:layout_marginStart="35dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="35dp"
+            android:background="@drawable/edittextbackground"
+            android:elevation="4dp"
+            android:hint="Enter Your Name"
+            android:textColorHint="@color/black">
 
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/Rl1"
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/uname"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:elevation="4dp"
-                android:layout_marginStart="20dp"
-                android:layout_below="@id/topbar"
-                android:layout_marginTop="20dp"
-                app:boxCornerRadiusBottomEnd="5dp"
-                app:boxCornerRadiusTopStart="10dp"
-                app:boxCornerRadiusBottomStart="5dp"
-                app:boxCornerRadiusTopEnd="8dp"
-                android:layout_marginEnd="20dp"
                 android:background="@drawable/edittextbackground"
-                android:hint="Enter Your Name"
-                android:textColorHint="@color/black"
-                >
+                android:importantForAutofill="no"
+                android:inputType="textEmailAddress"
 
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/uname"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/edittextbackground"
-                    android:textColor="@color/black"
-                    android:importantForAutofill="no"
-                    android:paddingTop="15dp"
-                    android:inputType="textEmailAddress"
-                    android:textSize="18sp" />
-            </com.google.android.material.textfield.TextInputLayout>
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+        </com.google.android.material.textfield.TextInputLayout>
 
-            <com.google.android.material.textfield.TextInputLayout
-                android:layout_below="@id/Rl1"
-                android:layout_marginTop="10dp"
-                android:id="@+id/Rl1a"
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/Rl1a"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/Rl1"
+            android:layout_marginStart="35dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="35dp"
+            android:background="@drawable/edittextbackground"
+            android:hint="Enter Your Email"
+            android:textColorHint="@color/black">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/regemail"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
-                android:layout_marginEnd="20dp"
+                android:layout_marginStart="3dp"
                 android:background="@drawable/edittextbackground"
-                android:hint="Enter Your Email"
-                android:textColorHint="@color/black"
-                >
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/regemail"
-                    android:paddingTop="15dp"
-                    android:layout_marginStart="3dp"
-
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/edittextbackground"
-                    android:textColor="@color/black"
-                    android:importantForAutofill="no"
-                    android:inputType="textEmailAddress"
-                    android:textSize="18sp" />
-            </com.google.android.material.textfield.TextInputLayout>
+                android:importantForAutofill="no"
+                android:inputType="textEmailAddress"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+        </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/Rl2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/Rl1a"
-            android:layout_marginStart="20dp"
+            android:layout_marginStart="35dp"
             android:layout_marginTop="10dp"
-            android:layout_marginEnd="20dp"
+            android:layout_marginEnd="35dp"
             android:background="@drawable/edittextbackground"
             android:hint="Enter Password"
             android:textColorHint="#000000">
@@ -107,81 +98,74 @@
                 android:background="@drawable/edittextbackground"
                 android:importantForAutofill="no"
                 android:inputType="textPassword"
-                android:paddingTop="15dp"
                 android:textColor="@color/black"
                 android:textSize="18sp" />
         </com.google.android.material.textfield.TextInputLayout>
 
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/Rl3"
-                android:layout_below="@+id/Rl2"
-                android:layout_marginTop="10dp"
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/Rl3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/Rl2"
+            android:layout_marginStart="35dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="35dp"
+            android:background="@drawable/edittextbackground"
+            android:hint="Confirm Password"
+            android:textColorHint="@color/black">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/cnpassword"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
-                android:layout_marginEnd="20dp"
+                android:layout_marginStart="3dp"
                 android:background="@drawable/edittextbackground"
-                android:hint="Confirm Password"
-                android:textColorHint="@color/black">
+                android:importantForAutofill="no"
+                android:inputType="textPassword"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+        </com.google.android.material.textfield.TextInputLayout>
 
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/cnpassword"
-                    android:paddingTop="15dp"
-                    android:layout_marginStart="3dp"
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/Rl6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/Rl6b"
+            android:layout_marginStart="35dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="35dp"
+            android:background="@drawable/edittextbackground"
+            android:hint="Enter Personal Number"
+            android:textColorHint="@color/black">
 
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/edittextbackground"
-                    android:importantForAutofill="no"
-                    android:inputType="textPassword"
-                    android:textColor="@color/black"
-                    android:textSize="18sp" />
-            </com.google.android.material.textfield.TextInputLayout>
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:layout_below="@id/Rl3"
-                android:layout_marginTop="10dp"
-                android:id="@+id/rl4a"
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/regpersonalno"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
-                android:layout_marginEnd="20dp"
                 android:background="@drawable/edittextbackground"
-                android:hint="Enter Personal Number"
-                android:textColorHint="@color/black">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/regpersonalno"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:paddingTop="15dp"
-                    android:background="@drawable/edittextbackground"
-                    android:importantForAutofill="no"
-                    android:inputType="number"
-                    android:textColor="@color/black"
-                    android:textSize="18sp" />
-            </com.google.android.material.textfield.TextInputLayout>
+                android:importantForAutofill="no"
+                android:inputType="number"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+        </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/Rl30"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/Rl3"
-            android:layout_marginStart="20dp"
+            android:layout_marginStart="35dp"
             android:layout_marginTop="10dp"
-            android:layout_marginEnd="20dp"
+            android:layout_marginEnd="35dp"
             android:background="@drawable/edittextbackground"
             android:hint="Enter Your Faculty"
-
             android:textColorHint="@color/black">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/regfaculty"
-                android:paddingTop="15dp"
-                android:layout_marginStart="3dp"
-
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="3dp"
                 android:background="@color/white"
                 android:importantForAutofill="no"
                 android:inputType="text"
@@ -190,133 +174,124 @@
 
         </com.google.android.material.textfield.TextInputLayout>
 
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/Rl6"
-                android:layout_below="@id/Rl30"
-                android:layout_marginTop="10dp"
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/Rl6b"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/Rl30"
+            android:layout_marginStart="35dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="35dp"
+            android:background="@drawable/edittextbackground"
+            android:hint="Enter unit"
+            android:textColorHint="@color/black">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/regunit"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
-                android:layout_marginEnd="20dp"
-                android:hint="Enter unit"
+                android:layout_marginStart="3dp"
                 android:background="@drawable/edittextbackground"
-                android:textColorHint="@color/black">
+                android:importantForAutofill="no"
+                android:inputType="text"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+        </com.google.android.material.textfield.TextInputLayout>
 
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/regunit"
-                    android:paddingTop="15dp"
-                    android:layout_marginStart="3dp"
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/Rl7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/Rl6"
+            android:layout_marginStart="35dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="35dp"
+            android:background="@drawable/edittextbackground"
+            android:hint="Enter Designation"
+            android:textColorHint="@color/black">
 
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/edittextbackground"
-                    android:importantForAutofill="no"
-                    android:inputType="text"
-                    android:textColor="@color/black"
-                    android:textSize="18sp" />
-            </com.google.android.material.textfield.TextInputLayout>
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/Rl7"
-                android:layout_below="@id/Rl6"
-                android:layout_marginTop="10dp"
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/regdesignation"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
-                android:layout_marginEnd="20dp"
+                android:layout_marginStart="3dp"
                 android:background="@drawable/edittextbackground"
-                android:hint="Enter Designation"
-                android:textColorHint="@color/black">
+                android:importantForAutofill="no"
+                android:inputType="text"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+        </com.google.android.material.textfield.TextInputLayout>
 
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/regdesignation"
-                    android:layout_width="match_parent"
-                    android:paddingTop="15dp"
-                    android:layout_marginStart="3dp"
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/Rl8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/Rl7"
+            android:layout_marginStart="35dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="35dp"
+            android:background="@drawable/edittextbackground"
+            android:hint="Enter Job Group"
+            android:textColorHint="@color/black">
 
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/edittextbackground"
-                    android:importantForAutofill="no"
-                    android:inputType="text"
-                    android:textColor="@color/black"
-                    android:textSize="18sp" />
-            </com.google.android.material.textfield.TextInputLayout>
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/Rl8"
-                android:layout_below="@id/Rl7"
-                android:layout_marginTop="10dp"
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/regjobgroup"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
-                android:layout_marginEnd="20dp"
-                android:hint="Enter Job Group"
                 android:background="@drawable/edittextbackground"
-                android:textColorHint="@color/black">
+                android:importantForAutofill="no"
+                android:inputType="text"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+        </com.google.android.material.textfield.TextInputLayout>
 
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/regjobgroup"
-                    android:layout_width="match_parent"
-                    android:paddingTop="15dp"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/edittextbackground"
-                    android:importantForAutofill="no"
-                    android:inputType="text"
-                    android:textColor="@color/black"
-                    android:textSize="18sp" />
-            </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/Rl9"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/Rl8"
+            android:layout_marginStart="35dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="35dp"
+            android:background="@drawable/edittextbackground"
+            android:hint="Enter special duty if any"
+            android:textColorHint="@color/black">
 
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/Rl9"
-                android:layout_marginTop="10dp"
-                android:layout_below="@id/Rl8"
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/regspduty"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
-                android:layout_marginEnd="20dp"
+                android:layout_marginStart="3dp"
                 android:background="@drawable/edittextbackground"
-                android:hint="Enter special duty if any"
-                android:textColorHint="@color/black">
+                android:importantForAutofill="no"
+                android:inputType="text"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+        </com.google.android.material.textfield.TextInputLayout>
 
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/regspduty"
-                    android:paddingTop="15dp"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/edittextbackground"
-                    android:importantForAutofill="no"
-                    android:inputType="text"
-                    android:layout_marginStart="3dp"
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/Rl10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/Rl9"
+            android:layout_marginStart="35dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="35dp"
+            android:background="@drawable/edittextbackground"
+            android:hint="Enter Job Group"
+            android:textColorHint="@color/black">
 
-                    android:textColor="@color/black"
-                    android:textSize="18sp" />
-            </com.google.android.material.textfield.TextInputLayout>
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/Rl10"
-                android:layout_marginTop="10dp"
-                android:layout_below="@id/Rl9"
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/regsupervisorname"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
-                android:layout_marginEnd="20dp"
-                android:hint="Enter Job Group"
+                android:layout_marginStart="3dp"
                 android:background="@drawable/edittextbackground"
-                android:textColorHint="@color/black">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/regsupervisorname"
-                    android:layout_width="match_parent"
-                    android:paddingTop="15dp"
-                    android:layout_marginStart="3dp"
-
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/edittextbackground"
-                    android:importantForAutofill="no"
-                    android:inputType="text"
-                    android:textColor="@color/black"
-                    android:textSize="18sp" />
-            </com.google.android.material.textfield.TextInputLayout>
+                android:importantForAutofill="no"
+                android:inputType="text"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+        </com.google.android.material.textfield.TextInputLayout>
 
             <ProgressBar
                 android:layout_below="@id/Rl10"
