@@ -4,33 +4,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#00BCD4"
+    android:background="#ffffff"
     android:scrollIndicators="right"
     tools:context=".Edtvandcovalues">
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/topbar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="#0094CC"
-        app:menu="@menu/menus" >
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textStyle="bold"
-            android:textAllCaps="true"
-            android:textColor="@color/white"
-            android:text="competence appraisal"
-            android:textSize="18sp" />
-    </androidx.appcompat.widget.Toolbar>
-<RelativeLayout
+
+        <RelativeLayout
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:id="@+id/relative1"
     android:visibility="gone"
-    android:layout_below="@id/topbar">
+    >
         <TextView
             android:id="@+id/integrity"
             android:layout_width="match_parent"
@@ -663,7 +649,7 @@
                     android:layout_height="match_parent"
                     android:layout_marginStart="20dp"
                     android:layout_marginEnd="20dp"
-                    android:background="#00BCD4">
+                    >
 
                     <RadioButton
                         android:id="@+id/ifive"
@@ -720,16 +706,17 @@
                         android:textStyle="bold" />
                 </RadioGroup>
             </androidx.cardview.widget.CardView>
+
             <TextView
                 android:id="@+id/proffessionalism"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:layout_below="@id/cardr1"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="20dp"
                 android:gravity="center"
-                android:layout_below="@id/cardr1"
-                android:textAllCaps="true"
                 android:text="professionalism"
+                android:textAllCaps="true"
                 android:textColor="@color/black"
                 android:textSize="23sp" />
             <androidx.cardview.widget.CardView
@@ -1136,6 +1123,23 @@
                         android:textStyle="bold" />
                 </RadioGroup>
             </androidx.cardview.widget.CardView>
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/topbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#0094CC"
+                app:menu="@menu/menus">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="competence appraisal"
+                    android:textAllCaps="true"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+            </androidx.appcompat.widget.Toolbar>
         </RelativeLayout>
     </RelativeLayout>
 

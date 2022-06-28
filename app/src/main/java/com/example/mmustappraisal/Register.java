@@ -27,9 +27,7 @@ import java.util.HashMap;
 import java.util.Objects;
 
 public class Register extends AppCompatActivity {
-private TextInputEditText email,password,confirmnpasssword,personalno, faculty, unit,
-        designation,jobgroup,speciladuty,supervisorname,username;
-private RadioGroup gender,userole;
+private TextInputEditText email,password,confirmnpasssword,personalno,username;
 private Button register,loginme;
 private FirebaseAuth fAuth;
 private DatabaseReference dbref;
@@ -46,16 +44,9 @@ private ProgressBar pb;
         password=findViewById(R.id.rpassword);
         confirmnpasssword=findViewById(R.id.cnpassword);
         personalno=findViewById(R.id.regpersonalno);
-        faculty=findViewById(R.id.regfaculty);
-        unit=findViewById(R.id.regunit);
-        designation=findViewById(R.id.regdesignation);
-        jobgroup=findViewById(R.id.regjobgroup);
-        speciladuty=findViewById(R.id.regspduty);
-        supervisorname=findViewById(R.id.regsupervisorname);
         register=findViewById(R.id.regokay);
         loginme=findViewById(R.id.login);
-        gender=findViewById(R.id.gen);
-        userole=findViewById(R.id.urole);
+
         getSupportActionBar().setDisplayShowTitleEnabled(false);
 
         fAuth =FirebaseAuth.getInstance();
@@ -74,45 +65,26 @@ private ProgressBar pb;
                 String pass = password.getText().toString();
                 String confirm = confirmnpasssword.getText().toString();
                 String no = personalno.getText().toString();
-                String fac = faculty.getText().toString();
-                String eunit = unit.getText().toString();
-                String des = designation.getText().toString();
-                int checkedId = gender.getCheckedRadioButtonId();
-                int checkme=userole.getCheckedRadioButtonId();
-                String jobgrp = jobgroup.getText().toString();
-                String special = speciladuty.getText().toString();
-                String supervisor = supervisorname.getText().toString();
-                RadioButton sgender = gender.findViewById(checkedId);
-                RadioButton role=userole.findViewById(checkedId);
-                if(role==null){
-                    Toast.makeText(Register.this,"please select role",Toast.LENGTH_SHORT).show();
-                }
 
-                if (sgender == null) {
-                    Toast.makeText(Register.this, "check the check box again", Toast.LENGTH_SHORT).show();
-                }
+
 
                 if (!(usrmail.contains("@gmail.com"))) {
                     Toast.makeText(Register.this, "wrong mail format", Toast.LENGTH_SHORT).show();
 
                 }
-                else if (TextUtils.isEmpty(usrmail) || TextUtils.isEmpty(pass) || TextUtils.isEmpty(confirm)
-                        || TextUtils.isEmpty(no)||TextUtils.isEmpty(usrname) || TextUtils.isEmpty(fac) || TextUtils.isEmpty(eunit) || TextUtils.isEmpty(des) ||
-                        TextUtils.isEmpty(jobgrp) || TextUtils.isEmpty(special) || TextUtils.isEmpty(supervisor)) {
+                else  (TextUtils.isEmpty(usrmail) || TextUtils.isEmpty(pass) || TextUtils.isEmpty(confirm)
+                        || TextUtils.isEmpty(no)||TextUtils.isEmpty(usrname) ) {
                     Toast.makeText(Register.this, "Hello, check all fields please", Toast.LENGTH_SHORT).show();
                 }
-                else {
-                    final String gender = sgender.getText().toString();
-                    final String level=role.getText().toString();
 
-                    create(usrmail, pass, no, fac,usrname, eunit, des, jobgrp, special, supervisor);
+
                 }
 
             }
         });
     }
 
-    private void create(String usrmail, String pass, String usrname,  String no, String fac, String eunit, String des, String jobgrp, String special, String supervisor) {
+    private void create(String usrmail, String pass, String usrname,  String no) {
         pb.setVisibility(View.VISIBLE);
         fAuth.createUserWithEmailAndPassword(usrmail,pass).addOnCompleteListener(new OnCompleteListener<AuthResult>(){
     @Override
@@ -130,12 +102,7 @@ private ProgressBar pb;
                 hashmap.put("usrmail", usrmail);
                 hashmap.put("usrname", usrname);
                 hashmap.put("no", no);
-                hashmap.put("fac", fac);
-                hashmap.put("eunit", eunit);
-                hashmap.put("des", des);
-                hashmap.put("jobgrp", jobgrp);
-                hashmap.put("special", special);
-                hashmap.put("supervisor", supervisor);
+
 
                 dbref.setValue(hashmap).addOnCompleteListener(new OnCompleteListener<Void>() {
                     @Override

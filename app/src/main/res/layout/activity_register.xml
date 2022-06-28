@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="#00BCD4"
+    android:background="#FFFFFF"
     tools:context=".Register">
     <RelativeLayout
         android:layout_width="match_parent"
@@ -82,7 +82,7 @@
             android:id="@+id/Rl2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/Rl1a"
+            android:layout_below="@id/Rl4"
             android:layout_marginStart="35dp"
             android:layout_marginTop="10dp"
             android:layout_marginEnd="35dp"
@@ -127,10 +127,10 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/Rl6"
+            android:id="@+id/Rl4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/Rl6b"
+            android:layout_below="@id/Rl1a"
             android:layout_marginStart="35dp"
             android:layout_marginTop="10dp"
             android:layout_marginEnd="35dp"
@@ -149,149 +149,10 @@
                 android:textSize="18sp" />
         </com.google.android.material.textfield.TextInputLayout>
 
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/Rl30"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/Rl3"
-            android:layout_marginStart="35dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginEnd="35dp"
-            android:background="@drawable/edittextbackground"
-            android:hint="Enter Your Faculty"
-            android:textColorHint="@color/black">
 
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/regfaculty"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="3dp"
-                android:background="@color/white"
-                android:importantForAutofill="no"
-                android:inputType="text"
-                android:textColor="@color/black"
-                android:textSize="18sp" />
 
-        </com.google.android.material.textfield.TextInputLayout>
 
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/Rl6b"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/Rl30"
-            android:layout_marginStart="35dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginEnd="35dp"
-            android:background="@drawable/edittextbackground"
-            android:hint="Enter unit"
-            android:textColorHint="@color/black">
 
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/regunit"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="3dp"
-                android:background="@drawable/edittextbackground"
-                android:importantForAutofill="no"
-                android:inputType="text"
-                android:textColor="@color/black"
-                android:textSize="18sp" />
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/Rl7"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/Rl6"
-            android:layout_marginStart="35dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginEnd="35dp"
-            android:background="@drawable/edittextbackground"
-            android:hint="Enter Designation"
-            android:textColorHint="@color/black">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/regdesignation"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="3dp"
-                android:background="@drawable/edittextbackground"
-                android:importantForAutofill="no"
-                android:inputType="text"
-                android:textColor="@color/black"
-                android:textSize="18sp" />
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/Rl8"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/Rl7"
-            android:layout_marginStart="35dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginEnd="35dp"
-            android:background="@drawable/edittextbackground"
-            android:hint="Enter Job Group"
-            android:textColorHint="@color/black">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/regjobgroup"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@drawable/edittextbackground"
-                android:importantForAutofill="no"
-                android:inputType="text"
-                android:textColor="@color/black"
-                android:textSize="18sp" />
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/Rl9"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/Rl8"
-            android:layout_marginStart="35dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginEnd="35dp"
-            android:background="@drawable/edittextbackground"
-            android:hint="Enter special duty if any"
-            android:textColorHint="@color/black">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/regspduty"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="3dp"
-                android:background="@drawable/edittextbackground"
-                android:importantForAutofill="no"
-                android:inputType="text"
-                android:textColor="@color/black"
-                android:textSize="18sp" />
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/Rl10"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/Rl9"
-            android:layout_marginStart="35dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginEnd="35dp"
-            android:background="@drawable/edittextbackground"
-            android:hint="Enter Job Group"
-            android:textColorHint="@color/black">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/regsupervisorname"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="3dp"
-                android:background="@drawable/edittextbackground"
-                android:importantForAutofill="no"
-                android:inputType="text"
-                android:textColor="@color/black"
-                android:textSize="18sp" />
-        </com.google.android.material.textfield.TextInputLayout>
 
             <ProgressBar
                 android:layout_below="@id/Rl10"
@@ -302,93 +163,26 @@
                 android:visibility="gone"
                 />
 
-            <RadioGroup
-                android:layout_below="@id/pbar"
-                android:layout_marginTop="10dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:padding="15dp"
-                android:gravity="center"
-                android:weightSum="2"
-                android:layout_marginStart="20dp"
-                android:layout_marginEnd="20dp"
-                android:id="@+id/gen"
-                android:orientation="horizontal">
-                <RadioButton
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textStyle="bold"
-                    android:textSize="18sp"
-                    android:gravity="center"
-                    android:layout_weight="1"
-                    android:textColor="@color/black"
-                    android:text="male"
-                    android:id="@+id/male"/>
-                <RadioButton
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textStyle="bold"
-                    android:gravity="center"
-                    android:textSize="18sp"
-                    android:layout_weight="1"
-                    android:textColor="@color/black"
-                    android:text="female"
-                    android:id="@+id/female"/>
-            </RadioGroup>
 
-            <RadioGroup
-                android:layout_marginTop="10dp"
-                android:layout_below="@id/gen"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:padding="15dp"
-                android:gravity="center"
-                android:weightSum="2"
-                android:layout_marginStart="20dp"
-                android:layout_marginEnd="20dp"
-                android:id="@+id/urole"
-                android:orientation="horizontal">
-                <RadioButton
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textStyle="bold"
-                    android:textSize="18sp"
-                    android:gravity="center"
-                    android:layout_weight="1"
-                    android:textColor="@color/black"
-                    android:text="Supervisor"
-                    android:id="@+id/supervisor"/>
-                <RadioButton
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textStyle="bold"
-                    android:gravity="center"
-                    android:textSize="18sp"
-                    android:layout_weight="1"
-                    android:textColor="@color/black"
-                    android:text="Employee"
-                    android:id="@+id/Employee"/>
-            </RadioGroup>
+        <Button
+            android:id="@+id/regokay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/Rl3"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/buttonbackground"
+            android:text="register" />
 
-            <Button
-                android:layout_marginTop="10dp"
-                android:layout_below="@id/urole"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@drawable/buttonbackground"
-                android:text="register"
-                android:id="@+id/regokay"
-                android:layout_centerHorizontal="true"
-                />
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@drawable/buttonbackground"
-                android:text="login"
-                android:layout_below="@id/regokay"
-                android:id="@+id/login"
-                android:layout_centerHorizontal="true"
-                />
+        <Button
+            android:id="@+id/login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/regokay"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/grey_button"
+            android:text="login" />
 
     </RelativeLayout>
 </ScrollView>

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#00BCD4"
+    android:background="#FFFFFF"
     tools:context=".login">
 
     <androidx.appcompat.widget.Toolbar
@@ -45,9 +45,9 @@
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/lemail"
-                android:paddingTop="15dp"
                 android:layout_width="match_parent"
                 android:layout_marginStart="3dp"
+                android:gravity="center"
                 android:layout_height="wrap_content"
                 android:background="@drawable/edittextbackground"
                 android:textColor="@color/white"
@@ -79,9 +79,10 @@
             android:id="@+id/lloginpassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:gravity="center"
             android:layout_marginStart="35dp"
             android:layout_marginEnd="35dp"
-            android:layout_marginTop="15dp"
+            android:layout_marginTop="10dp"
             app:tabTextColor="@color/black"
             android:hint="Enter Your Password"
             android:background="@drawable/edittextbackground"
@@ -89,7 +90,7 @@
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/lpassword"
-                android:paddingTop="15dp"
+                android:gravity="center"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/edittextbackground"
@@ -130,15 +131,14 @@
         android:layout_marginTop="60dp"
         >
         <TextView
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/reg"
-            android:layout_marginStart="20dp"
-            android:layout_marginEnd="20dp"
+            android:layout_gravity="center"
+            android:background="@drawable/grey_button"
             android:gravity="center"
             android:text="No Account? register here"
-            android:textSize="18sp"
-            android:textColor="#51F300"/>
+            android:textColor="#00BCD4"/>
 
 
 
