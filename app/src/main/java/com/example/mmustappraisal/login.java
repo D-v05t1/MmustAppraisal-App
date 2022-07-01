@@ -92,7 +92,7 @@ sAuth.signInWithEmailAndPassword(mail,pass).addOnCompleteListener(new OnComplete
                  finish();
              }else{
         Intent c=new Intent(login.this,MainActivity.class);
-c.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK|Intent.FLAG_ACTIVITY_NEW_TASK);
+        c.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK|Intent.FLAG_ACTIVITY_NEW_TASK);
         startActivity(c);
         finish();}
         }
@@ -104,8 +104,6 @@ c.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK|Intent.FLAG_ACTIVITY_NEW_TASK);
     }
 });
     }
-
-
 
     @Override
     protected void onStart() {

@@ -66,23 +66,26 @@ private ProgressBar pb;
                 String confirm = confirmnpasssword.getText().toString();
                 String no = personalno.getText().toString();
 
+                boolean a=!usrmail.contains("@gmail.com");
+                boolean b=!usrmail.contains("@yahoo.com");
+                boolean c=!usrmail.contains("@email.com");
+                boolean d=!usrmail.contains("@mmust.co.ke");
 
-
-                if (!(usrmail.contains("@gmail.com"))) {
-                    Toast.makeText(Register.this, "wrong mail format", Toast.LENGTH_SHORT).show();
-
-                }
-                else  (TextUtils.isEmpty(usrmail) || TextUtils.isEmpty(pass) || TextUtils.isEmpty(confirm)
+                 if (TextUtils.isEmpty(usrmail) || TextUtils.isEmpty(pass) || TextUtils.isEmpty(confirm)
                         || TextUtils.isEmpty(no)||TextUtils.isEmpty(usrname) ) {
                     Toast.makeText(Register.this, "Hello, check all fields please", Toast.LENGTH_SHORT).show();
                 }
-
+                else if (a ||b ||c ||d ) {
+                    Toast.makeText(Register.this, "wrong mail format", Toast.LENGTH_SHORT).show();
 
                 }
 
+
+
+
             }
         });
-    }
+}
 
     private void create(String usrmail, String pass, String usrname,  String no) {
         pb.setVisibility(View.VISIBLE);
