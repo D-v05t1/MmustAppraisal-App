@@ -15,7 +15,7 @@
             android:id="@+id/topbar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="#0094CC"
+            android:background="#00BCD4"
             app:menu="@menu/menus">
 
             <TextView
@@ -30,11 +30,12 @@
             android:id="@+id/tv"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
             android:layout_below="@id/topbar"
-            android:textColor="@color/black"
-           android:gravity="center"
-            android:text="please fill this fields">
+            android:layout_marginTop="20dp"
+            android:background="#00BCD4"
+            android:gravity="center"
+            android:text="please fill this fields"
+            android:textColor="@color/black">
 
         </TextView>
         <RelativeLayout
@@ -46,7 +47,6 @@
             android:layout_marginTop="15dp"
             android:orientation="horizontal"
             android:visibility="visible">
-
 
 
             <com.google.android.material.textfield.TextInputLayout
@@ -71,13 +71,14 @@
                     android:gravity="center"
                     android:textColor="@color/black" />
             </com.google.android.material.textfield.TextInputLayout>
+
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/r2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_below="@id/r"
                 android:layout_marginStart="35dp"
                 android:layout_marginTop="10dp"
-                android:layout_below="@id/r"
                 android:layout_marginEnd="35dp"
                 android:background="@drawable/edittextbackground"
                 android:hint="campus"
@@ -94,11 +95,12 @@
                     android:gravity="center"
                     android:textColor="@color/black" />
             </com.google.android.material.textfield.TextInputLayout>
+
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/r3"
-                android:layout_below="@id/r2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_below="@id/r2"
                 android:layout_marginStart="35dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginEnd="35dp"
@@ -117,8 +119,19 @@
                     android:gravity="center"
                     android:textColor="@color/black" />
             </com.google.android.material.textfield.TextInputLayout>
-        </RelativeLayout>
 
+
+            <Button
+                android:id="@+id/ln"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/r3"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="25dp"
+                android:background="@drawable/buttonbackground"
+                android:text="send" />
+
+         </RelativeLayout>
         <RelativeLayout
 
             android:id="@+id/sll2"

@@ -14,7 +14,7 @@
             android:id="@+id/topbar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="#0094CC"
+            android:background="#00BCD4"
             app:menu="@menu/menu_m">
 
             <TextView
@@ -49,8 +49,7 @@
                 android:background="@drawable/edittextbackground"
                 android:importantForAutofill="no"
                 android:inputType="textEmailAddress"
-
-                android:textColor="@color/black"
+                android:textColor="@color/white"
                 android:textSize="18sp" />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -60,7 +59,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/Rl1"
             android:layout_marginStart="35dp"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="15dp"
             android:layout_marginEnd="35dp"
             android:background="@drawable/edittextbackground"
             android:hint="Enter Your Email"
@@ -74,7 +73,7 @@
                 android:background="@drawable/edittextbackground"
                 android:importantForAutofill="no"
                 android:inputType="textEmailAddress"
-                android:textColor="@color/black"
+                android:textColor="@color/white"
                 android:textSize="18sp" />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -84,7 +83,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/Rl4"
             android:layout_marginStart="35dp"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="15dp"
             android:layout_marginEnd="35dp"
             android:background="@drawable/edittextbackground"
             android:hint="Enter Password"
@@ -98,7 +97,7 @@
                 android:background="@drawable/edittextbackground"
                 android:importantForAutofill="no"
                 android:inputType="textPassword"
-                android:textColor="@color/black"
+                android:textColor="@color/white"
                 android:textSize="18sp" />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -108,7 +107,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/Rl2"
             android:layout_marginStart="35dp"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="15dp"
             android:layout_marginEnd="35dp"
             android:background="@drawable/edittextbackground"
             android:hint="Confirm Password"
@@ -122,7 +121,7 @@
                 android:background="@drawable/edittextbackground"
                 android:importantForAutofill="no"
                 android:inputType="textPassword"
-                android:textColor="@color/black"
+                android:textColor="@color/white"
                 android:textSize="18sp" />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -132,7 +131,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/Rl1a"
             android:layout_marginStart="35dp"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="15dp"
             android:layout_marginEnd="35dp"
             android:background="@drawable/edittextbackground"
             android:hint="Enter Personal Number"
@@ -149,13 +148,8 @@
                 android:textSize="18sp" />
         </com.google.android.material.textfield.TextInputLayout>
 
-
-
-
-
-
             <ProgressBar
-                android:layout_below="@id/Rl10"
+                android:layout_below="@id/login"
                 android:id="@+id/pbar"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
@@ -163,14 +157,13 @@
                 android:visibility="gone"
                 />
 
-
         <Button
             android:id="@+id/regokay"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/Rl3"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="15dp"
             android:background="@drawable/buttonbackground"
             android:text="register" />
 
@@ -180,8 +173,8 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/regokay"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="10dp"
-            android:background="@drawable/grey_button"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/buttonbackground"
             android:text="login" />
 
     </RelativeLayout>

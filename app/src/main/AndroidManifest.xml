@@ -16,9 +16,6 @@
             android:name=".Admin"
             android:exported="false" />
         <activity
-            android:name=".employeeedt"
-            android:exported="false" />
-        <activity
             android:name="com.example.mmustappraisal2.Edtvandcovalues"
             android:exported="false" />
         <activity

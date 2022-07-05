@@ -23,10 +23,10 @@ import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.firestore.FirebaseFirestore;
 
 public class Edtobjective extends AppCompatActivity {
-        private EditText perfomance_I1,Agreed_per_I1,proof1,Agreed_target1,perfomance_I2,Agreed_per_I2
+        private EditText perfomance_I1,campus,designation,Agreed_per_I1,proof1,Agreed_target1,perfomance_I2,Agreed_per_I2
         ,proof2,Agreed_target2,selfmark2,perfomance_I3,perfomance_I4,perfomance_I5,Agreed_per_I3,Agreed_per_I4,Agreed_per_I5
         ,proof3,proof4,proof5,Agreed_target3,Agreed_target4,Agreed_target5,selfmark1,selfmark3,selfmark4,selfmark5,name;
-        private Button send,viewall;
+        private Button send,viewall,sendnw;
         private FirebaseDatabase fd;
         private DatabaseReference dr;
         private String objectiveOwnerId;
@@ -43,7 +43,13 @@ public class Edtobjective extends AppCompatActivity {
 
         fd=FirebaseDatabase.getInstance();
         dr=fd.getReference().child("Objectives");
-        name=findViewById(R.id.nameId);
+
+        name=findViewById(R.id.r1a);
+        campus=findViewById(R.id.r2);
+        designation=findViewById(R.id.r3);
+        sendnw=findViewById(R.id.ln);
+
+
         perfomance_I5=findViewById(R.id.indicator5a);
         Agreed_per_I5=findViewById(R.id.viewmore5);
         proof5=findViewById(R.id.proof5);
@@ -82,6 +88,14 @@ public class Edtobjective extends AppCompatActivity {
         objective_view4=findViewById(R.id.sll4);
         objective_view5=findViewById(R.id.sll5);
         viewall=findViewById(R.id.viewall);
+        sendnw.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String _name = name.getText().toString();
+                String _campus = campus.getText().toString();
+                String _designation = designation.getText().toString();
+            }
+        });
 
         seeview=true;
         viewall.setOnClickListener(new View.OnClickListener() {

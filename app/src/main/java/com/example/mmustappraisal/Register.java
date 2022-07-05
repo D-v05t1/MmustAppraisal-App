@@ -20,8 +20,11 @@ import com.google.android.material.textfield.TextInputEditText;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 import java.util.HashMap;
 import java.util.Objects;
@@ -29,16 +32,21 @@ import java.util.Objects;
 public class Register extends AppCompatActivity {
 private TextInputEditText email,password,confirmnpasssword,personalno,username;
 private Button register,loginme;
-private FirebaseAuth fAuth;
-private DatabaseReference dbref;
+private FirebaseDatabase firebaseDatabase;
+private DatabaseReference databaseReference;
 private ProgressBar pb;
+regemployee Regemployee;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
         pb=findViewById(R.id.pbar);
+
+
         Toolbar toolbar =findViewById(R.id.topbar);
         setSupportActionBar(toolbar);
+
+
         email=findViewById(R.id.regemail);
         username=findViewById(R.id.uname);
         password=findViewById(R.id.rpassword);
@@ -47,9 +55,13 @@ private ProgressBar pb;
         register=findViewById(R.id.regokay);
         loginme=findViewById(R.id.login);
 
-        getSupportActionBar().setDisplayShowTitleEnabled(false);
 
-        fAuth =FirebaseAuth.getInstance();
+        firebaseDatabase=FirebaseDatabase.getInstance();
+        getSupportActionBar().setDisplayShowTitleEnabled(false);
+        regemployee Regemployee=new regemployee();
+         databaseReference = firebaseDatabase.getReference("EmployeeInfo");
+
+
         loginme.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -57,6 +69,7 @@ private ProgressBar pb;
           startActivity(p);
             }
         });
+
         register.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -66,72 +79,43 @@ private ProgressBar pb;
                 String confirm = confirmnpasssword.getText().toString();
                 String no = personalno.getText().toString();
 
-                boolean a=!usrmail.contains("@gmail.com");
-                boolean b=!usrmail.contains("@yahoo.com");
-                boolean c=!usrmail.contains("@email.com");
-                boolean d=!usrmail.contains("@mmust.co.ke");
+
 
                  if (TextUtils.isEmpty(usrmail) || TextUtils.isEmpty(pass) || TextUtils.isEmpty(confirm)
                         || TextUtils.isEmpty(no)||TextUtils.isEmpty(usrname) ) {
                     Toast.makeText(Register.this, "Hello, check all fields please", Toast.LENGTH_SHORT).show();
-                }
-                else if (a ||b ||c ||d ) {
-                    Toast.makeText(Register.this, "wrong mail format", Toast.LENGTH_SHORT).show();
+                 }
+                 else {
 
-                }
+                     add_data_to_firebase(usrmail, usrname, pass, confirm, no);
+
+                 }
+            } });}
+
+    private void add_data_to_firebase(String usrmail, String usrname, String pass, String confirm, String no) {
+
+        Regemployee.setUsermail(usrmail);
+        Regemployee.setPasswd(pass);
+        Regemployee.setUsername(usrname);
+        Regemployee.setNumber(no);
 
 
 
+        databaseReference.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
 
+                // data base reference will sends data to firebase.
+                databaseReference.setValue(Regemployee);
+
+
+                Toast.makeText(Register.this, "data added", Toast.LENGTH_SHORT).show();
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+                Toast.makeText(Register.this, "Fail to add data " + error, Toast.LENGTH_SHORT).show();
             }
         });
-}
-
-    private void create(String usrmail, String pass, String usrname,  String no) {
-        pb.setVisibility(View.VISIBLE);
-        fAuth.createUserWithEmailAndPassword(usrmail,pass).addOnCompleteListener(new OnCompleteListener<AuthResult>(){
-    @Override
-            public void onComplete(@NonNull Task<AuthResult> task) {
-        {
-            if (task.isSuccessful()) {
-                FirebaseUser rUser;
-                rUser = FirebaseAuth.getInstance().getCurrentUser();
-                String userId = rUser.getUid();
-               dbref = FirebaseDatabase.getInstance().getReference("User").child(userId);
-
-                HashMap<String, String> hashmap = new HashMap<>();
-
-                hashmap.put("userid", userId);
-                hashmap.put("usrmail", usrmail);
-                hashmap.put("usrname", usrname);
-                hashmap.put("no", no);
-
-
-                dbref.setValue(hashmap).addOnCompleteListener(new OnCompleteListener<Void>() {
-                    @Override
-                    public void onComplete(@NonNull Task<Void> task) {
-                        pb.setVisibility(View.GONE);
-                        if (task.isSuccessful()) {
-
-                            Intent r = new Intent(Register.this, login.class);
-                            r.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
-                            startActivity(r);
-                            finish();}
-
-
-                    }
-                });}
-              else{
-                Toast.makeText(Register.this, Objects.requireNonNull(task.getException().getMessage()), Toast.LENGTH_SHORT).show();
-               }
-
-                }
-
-            } 
-
-
-    });
-    }
-
-
-        }
+    }}
