@@ -7,7 +7,7 @@
         android:title="Account"
         app:showAsAction="ifRoom"
         android:icon="@drawable/account"/>
-<item
+    <item
     android:id="@+id/logout"
 android:title="logout"
 app:showAsAction="ifRoom"

@@ -11,7 +11,7 @@
         android:id="@+id/topbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#0094CC"
+        android:background="#00BCD4"
         app:menu="@menu/memu_main">
 
         <TextView

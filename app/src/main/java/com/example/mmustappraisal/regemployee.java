@@ -4,8 +4,18 @@ public class regemployee {
 
     public  String usermail;
     public  String passwd;
+    public  String confirmpasswd;
     public  String username;
     public  String number;
+    public String getConfirmpasswd() {
+        return confirmpasswd;
+    }
+
+    public void setConfirmpasswd(String confirmpasswd) {
+        this.confirmpasswd = confirmpasswd;
+    }
+
+
 
     public regemployee() {
 
